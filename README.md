@@ -18,7 +18,7 @@ Tutorial on how to set up static ip on Windows can be found [here](https://purei
 
 ## Setup
 
-1. Download OPIT Lan [0.2.0](https://github.com/OderoPos/opit-windows/releases/tag/0.2.0) for Windows and unzip the archive.<br/>
+1. Download the latest OPIT Lan for Windows [release](https://github.com/OderoPos/opit-lan-windows/releases) and unzip the archive.<br/>
 2. Copy archive contents inside the sample project folder.<br/>
 3. Open the sample app project solution with Microsoft Visual Studio (make sure C++ module is installed).<br/>
 4. In Microsoft Visual Studio go to Project -> Properties -> C/C++ -> Command Line -> Additional Options -> add /std:c++latest<br/>
