@@ -27,4 +27,4 @@ in the popup press the 3 dots (...) button from the right -> Choose headers fold
 6. Project -> Properties -> Linker -> Input -> Additional Dependencies -> click on the dropdown -> 
 Edit -> OpitDesktop.lib -> Ok<br/>
 7. Project -> Properties -> Linker -> General -> Additional Library Directories -> click on the dropdown -> Edit -> 
-in the popup press the 3 dots (...) button from the right -> select x64\Debug folder from opit-desktop project
+in the popup press the 3 dots (...) button from the right -> select the folder where OpitDesktop.lib is located.
