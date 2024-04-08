@@ -1,14 +1,11 @@
 #pragma once
 
-#include <winrt/Windows.Data.Json.h>
 #include "Request.h"
 
-using namespace winrt::Windows::Data::Json;
-
-class DllExport ReceiptRequest : public Request {
+class ReceiptRequest : public Request {
 private:
-    char* receiptNo;
-    char* uniqueId;
+    std::string receiptNo;
+    std::string uniqueId;
 
 public:
     ReceiptRequest();
@@ -20,12 +17,8 @@ public:
 
     ~ReceiptRequest();
 
-    const char* getReceiptNo();
-    void setReceiptNo(const char* receiptNo_);
-    const char* getUniqueId();
-    void setUniqueId(const char* uniqueId_);
     bool operator==(const ReceiptRequest& rhs);
-    const char* toJson();
-    static ReceiptRequest fromJson(const char*& json);
+    const std::string toJson();
+    static ReceiptRequest fromJson(const char* json);
     void toString();
 };

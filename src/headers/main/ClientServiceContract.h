@@ -2,7 +2,8 @@
 
 #include "../dll.h"
 
-class DllExport ClientServiceContract {
+class DllExport
+ClientServiceContract {
 public:
     virtual void sendPaymentRequest(double amount, const char* currency, const char* uniqueId);
     virtual void printSettlement(const char* uniqueId);

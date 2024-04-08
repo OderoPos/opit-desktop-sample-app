@@ -1,15 +1,12 @@
 #pragma once
 
-#include <winrt/Windows.Data.Json.h>
 #include "Result.h"
 
-using namespace winrt::Windows::Data::Json;
-
-class DllExport ReprintReceiptNumberResult : public Result {
+class ReprintReceiptNumberResult : public Result {
 private:
-    char* result;
-    char* receiptNo;
-    char* uniqueId;
+    std::string result;
+    std::string receiptNo;
+    std::string uniqueId;
 
 public:
     ReprintReceiptNumberResult();
@@ -22,14 +19,8 @@ public:
 
     ~ReprintReceiptNumberResult();
 
-    const char* getResult();
-    void setResult(const char* result_);
-    const char* getReceiptNo();
-    void setReceiptNo(const char* receiptNo_);
-    const char* getUniqueId();
-    void setUniqueId(const char* uniqueId_);
     bool operator==(const ReprintReceiptNumberResult& rhs);
-    const char* toJson();
-    static ReprintReceiptNumberResult fromJson(const char*& json);
+    const std::string toJson();
+    static ReprintReceiptNumberResult fromJson(const char* json);
     void toString();
 };

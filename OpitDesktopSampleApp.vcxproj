@@ -21,6 +21,36 @@
   <ItemGroup>
     <ClCompile Include="src\OpitMain.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\headers\dll.h" />
+    <ClInclude Include="src\headers\main\ClientServiceContract.h" />
+    <ClInclude Include="src\headers\main\ClientServiceExtendedContract.h" />
+    <ClInclude Include="src\headers\main\ClientThread.h" />
+    <ClInclude Include="src\headers\main\InternalOpitResultListener.h" />
+    <ClInclude Include="src\headers\main\OpitResultListener.h" />
+    <ClInclude Include="src\headers\pojos\requests\ClientMessage.h" />
+    <ClInclude Include="src\headers\pojos\requests\CurrencyRequest.h" />
+    <ClInclude Include="src\headers\pojos\requests\HostMessage.h" />
+    <ClInclude Include="src\headers\pojos\requests\PaymentRequest.h" />
+    <ClInclude Include="src\headers\pojos\requests\ReceiptRequest.h" />
+    <ClInclude Include="src\headers\pojos\requests\Request.h" />
+    <ClInclude Include="src\headers\pojos\requests\SimpleRequest.h" />
+    <ClInclude Include="src\headers\pojos\results\BasicResult.h" />
+    <ClInclude Include="src\headers\pojos\results\DetailedXResult.h" />
+    <ClInclude Include="src\headers\pojos\results\LastSettlementResult.h" />
+    <ClInclude Include="src\headers\pojos\results\PaymentResult.h" />
+    <ClInclude Include="src\headers\pojos\results\ReprintReceiptLastResult.h" />
+    <ClInclude Include="src\headers\pojos\results\ReprintReceiptNumberResult.h" />
+    <ClInclude Include="src\headers\pojos\results\Result.h" />
+    <ClInclude Include="src\headers\pojos\results\SettlementResult.h" />
+    <ClInclude Include="src\headers\pojos\results\SimpleXResult.h" />
+    <ClInclude Include="src\headers\pojos\results\VoidResult.h" />
+    <ClInclude Include="src\headers\utils\ClientUtils.h" />
+    <ClInclude Include="src\headers\utils\Constants.h" />
+    <ClInclude Include="src\headers\utils\Debug.h" />
+    <ClInclude Include="src\headers\utils\JsonUtils.h" />
+    <ClInclude Include="src\headers\utils\Sleep.hpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -113,16 +143,16 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;OPIT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalOptions>/std:c++latest %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>C:\Users\TokenTest\Downloads\opit-desktop\src\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\token01\Downloads\opit-desktop-sample-app\src\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>OpitDesktop.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\TokenTest\Downloads\opit-desktop\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OpitUsbDesktop.lib;libusb-1.0.27.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\token01\Downloads\opit-desktop-sample-app;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

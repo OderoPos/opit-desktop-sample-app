@@ -1,15 +1,12 @@
 #pragma once
 
-#include <winrt/Windows.Data.Json.h>
 #include "Result.h"
 
-using namespace winrt::Windows::Data::Json;
-
-class DllExport VoidResult : public Result {
+class VoidResult : public Result {
 private:
-    char* result;
-    char* receiptNo;
-    char* uniqueId;
+    std::string result;
+    std::string receiptNo;
+    std::string uniqueId;
 
 public:
     VoidResult();
@@ -22,14 +19,8 @@ public:
 
     ~VoidResult();
 
-    const char* getResult();
-    void setResult(const char* result_);
-    const char* getReceiptNo();
-    void setReceiptNo(const char* receiptNo_);
-    const char* getUniqueId();
-    void setUniqueId(const char* uniqueId_);
     bool operator==(const VoidResult& rhs);
-    const char* toJson();
-    static VoidResult fromJson(const char*& json);
+    const std::string toJson();
+    static VoidResult fromJson(const char* json);
     void toString();
 };

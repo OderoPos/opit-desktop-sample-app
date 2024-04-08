@@ -1,15 +1,17 @@
 #pragma once
 
-#include <winrt/Windows.Data.Json.h>
+#include <iostream>
+//#include <sstream>
+#include <string>
+#include <cstring>
+#include "../../utils/Constants.h"
 #include "../../dll.h"
 
-using namespace winrt::Windows::Data::Json;
-
-class DllExport HostMessage {
+class HostMessage {
 private:
-    char* pairCode;
-    char* operationType;
-    char* message;
+    std::string pairCode;
+    std::string operationType;
+    std::string message;
 
 public:
     HostMessage();
@@ -22,14 +24,8 @@ public:
 
     ~HostMessage();
 
-    const char* getPairCode();
-    void setPairCode(const char* pairCode_);
-    const char* getOperationType();
-    void setOperationType(const char* operationType_);
-    const char* getMessage();
-    void setMessage(const char* message_);
     bool operator==(const HostMessage& rhs);
-    const char* toJson();
-    static HostMessage fromJson(const char*& json);
+    const std::string toJson();
+    static HostMessage fromJson(const char* json);
     void toString();
 };

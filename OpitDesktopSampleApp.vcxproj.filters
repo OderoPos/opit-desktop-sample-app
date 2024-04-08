@@ -13,10 +13,111 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\main">
+      <UniqueIdentifier>{604fce04-0e58-4b84-b22f-e5721c971feb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\pojos">
+      <UniqueIdentifier>{64728397-230f-4ef1-b850-65cd87d1bd5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\pojos\requests">
+      <UniqueIdentifier>{494d5a91-8e22-4ffe-ba2e-2f804bb5451a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\pojos\results">
+      <UniqueIdentifier>{e38c49fc-b883-41f0-8460-e92335f70ea9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utils">
+      <UniqueIdentifier>{26b2a968-fa22-48ae-83d8-d392905c1400}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\OpitMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\headers\main\ClientServiceContract.h">
+      <Filter>Header Files\main</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\main\ClientServiceExtendedContract.h">
+      <Filter>Header Files\main</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\main\ClientThread.h">
+      <Filter>Header Files\main</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\main\InternalOpitResultListener.h">
+      <Filter>Header Files\main</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\main\OpitResultListener.h">
+      <Filter>Header Files\main</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ClientUtils.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\Constants.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\Debug.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\JsonUtils.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\Sleep.hpp">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\BasicResult.h">
+      <Filter>Header Files\pojos\results</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\DetailedXResult.h">
+      <Filter>Header Files\pojos\results</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\LastSettlementResult.h">
+      <Filter>Header Files\pojos\results</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\PaymentResult.h">
+      <Filter>Header Files\pojos\results</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\ReprintReceiptLastResult.h">
+      <Filter>Header Files\pojos\results</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\ReprintReceiptNumberResult.h">
+      <Filter>Header Files\pojos\results</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\Result.h">
+      <Filter>Header Files\pojos\results</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\SettlementResult.h">
+      <Filter>Header Files\pojos\results</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\SimpleXResult.h">
+      <Filter>Header Files\pojos\results</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\VoidResult.h">
+      <Filter>Header Files\pojos\results</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\requests\ClientMessage.h">
+      <Filter>Header Files\pojos\requests</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\requests\CurrencyRequest.h">
+      <Filter>Header Files\pojos\requests</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\requests\HostMessage.h">
+      <Filter>Header Files\pojos\requests</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\requests\PaymentRequest.h">
+      <Filter>Header Files\pojos\requests</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\requests\ReceiptRequest.h">
+      <Filter>Header Files\pojos\requests</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\requests\Request.h">
+      <Filter>Header Files\pojos\requests</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\requests\SimpleRequest.h">
+      <Filter>Header Files\pojos\requests</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\dll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,13 +1,10 @@
 #pragma once
 
-#include <winrt/Windows.Data.Json.h>
 #include "Request.h"
 
-using namespace winrt::Windows::Data::Json;
-
-class DllExport SimpleRequest : public Request {
+class SimpleRequest : public Request {
 private:
-    char* uniqueId;
+    std::string uniqueId;
 
 public:
     SimpleRequest();
@@ -18,10 +15,8 @@ public:
 
     ~SimpleRequest();
 
-    const char* getUniqueId();
-    void setUniqueId(const char* uniqueId_);
     bool operator==(const SimpleRequest& rhs);
-    const char* toJson();
-    static SimpleRequest fromJson(const char*& json);
+    const std::string toJson();
+    static SimpleRequest fromJson(const char* json);
     void toString();
 };

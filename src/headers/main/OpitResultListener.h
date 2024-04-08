@@ -11,7 +11,8 @@
 #include "../pojos/results/SettlementResult.h"
 #include "../dll.h"
 
-class DllExport OpitResultListener {
+class DllExport 
+OpitResultListener {
 public:
     void onPaymentResult(Result& result);
     void onVoidResult(Result& result);
