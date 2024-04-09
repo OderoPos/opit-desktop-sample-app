@@ -48,6 +48,11 @@ int __cdecl main(int argc, char** argv) {
 
 		std::cin >> option;
 
+		if (option < 1 || option > 9) {
+			std::cout << "Wrong choice." << std::endl;
+			return 0;
+		}
+
 		resolveChooser(option);
 
     } while (thread.isConnected());

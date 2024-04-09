@@ -31,7 +31,7 @@ public:
 
     ~ClientThread();
 
-    bool start();
+    void start();
     bool isConnected();
     void sendPaymentRequest(double amount, const char* currency, const char* uniqueId);
     void printSettlement(const char* uniqueId);
@@ -42,14 +42,4 @@ public:
     void getDetailedXReport(const char* currency, const char* uniqueId);
     void voidReceipt(const char* receiptNo, const char* uniqueId);
     void destroy();
-
-private:
-    volatile bool isThreadActive = true;
-    volatile bool isConnectedBoolean = false;
-    InternalOpitResultListener* internalOpitResultListener = NULL;
-    
-    void processResponse(void* lpParam);
-    void doSuccess(const char* message);
-    template <typename T> void sendResult(const char* message);
-    template <typename T> void sendToHost(const char* json, T& request);
 };
