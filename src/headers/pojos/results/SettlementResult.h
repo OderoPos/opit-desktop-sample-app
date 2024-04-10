@@ -3,10 +3,6 @@
 #include "Result.h"
 
 class SettlementResult : public Result {
-private:
-    std::string result;
-    std::string uniqueId;
-
 public:
     SettlementResult();
 

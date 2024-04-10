@@ -3,11 +3,6 @@
 #include "Result.h"
 
 class LastSettlementResult : public Result {
-private:
-    std::string result;
-    std::string currency;
-    std::string uniqueId;
-
 public:
     LastSettlementResult();
 

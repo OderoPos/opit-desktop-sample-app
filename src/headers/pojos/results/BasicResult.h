@@ -3,9 +3,6 @@
 #include "Result.h"
 
 class BasicResult : public Result {
-private:
-    std::string result;
-
 public:
     BasicResult();
 

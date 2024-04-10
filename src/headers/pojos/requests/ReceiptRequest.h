@@ -3,10 +3,6 @@
 #include "Request.h"
 
 class ReceiptRequest : public Request {
-private:
-    std::string receiptNo;
-    std::string uniqueId;
-
 public:
     ReceiptRequest();
 

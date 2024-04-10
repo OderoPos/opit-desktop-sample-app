@@ -3,11 +3,6 @@
 #include "Result.h"
 
 class VoidResult : public Result {
-private:
-    std::string result;
-    std::string receiptNo;
-    std::string uniqueId;
-
 public:
     VoidResult();
 

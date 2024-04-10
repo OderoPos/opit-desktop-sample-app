@@ -4,7 +4,6 @@
 #include "ClientServiceExtendedContract.h"
 #include "../utils/Constants.h"
 #include "../utils/ClientUtils.h"
-#include "../utils/Debug.h"
 #include "../utils/JsonUtils.h"
 #include "../pojos/requests/ClientMessage.h"
 #include "../pojos/requests/HostMessage.h"

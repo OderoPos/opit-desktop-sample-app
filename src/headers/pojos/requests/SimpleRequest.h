@@ -3,9 +3,6 @@
 #include "Request.h"
 
 class SimpleRequest : public Request {
-private:
-    std::string uniqueId;
-
 public:
     SimpleRequest();
 

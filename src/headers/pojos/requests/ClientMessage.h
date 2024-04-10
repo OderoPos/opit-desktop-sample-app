@@ -7,10 +7,6 @@
 #include "../../dll.h"
 
 class ClientMessage {
-private:
-    std::string type;
-    std::string message;
-
 public:
     ClientMessage();
 

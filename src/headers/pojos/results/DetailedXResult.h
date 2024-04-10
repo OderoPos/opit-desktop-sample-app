@@ -3,11 +3,6 @@
 #include "Result.h"
 
 class DetailedXResult : public Result {
-private:
-    std::string result;
-    std::string currency;
-    std::string uniqueId;
-
 public:
     DetailedXResult();
 

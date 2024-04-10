@@ -56,9 +56,6 @@
     <ClInclude Include="src\headers\utils\Constants.h">
       <Filter>Header Files\utils</Filter>
     </ClInclude>
-    <ClInclude Include="src\headers\utils\Debug.h">
-      <Filter>Header Files\utils</Filter>
-    </ClInclude>
     <ClInclude Include="src\headers\utils\JsonUtils.h">
       <Filter>Header Files\utils</Filter>
     </ClInclude>

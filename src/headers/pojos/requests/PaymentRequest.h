@@ -3,12 +3,6 @@
 #include "Request.h"
 
 class PaymentRequest : Request {
-private:
-    double amount = 0;
-    std::string currency;
-    std::string currencyCode;
-    std::string uniqueId;
-
 public:
     PaymentRequest();
 

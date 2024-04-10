@@ -47,7 +47,6 @@
     <ClInclude Include="src\headers\pojos\results\VoidResult.h" />
     <ClInclude Include="src\headers\utils\ClientUtils.h" />
     <ClInclude Include="src\headers\utils\Constants.h" />
-    <ClInclude Include="src\headers\utils\Debug.h" />
     <ClInclude Include="src\headers\utils\JsonUtils.h" />
     <ClInclude Include="src\headers\utils\Sleep.hpp" />
   </ItemGroup>

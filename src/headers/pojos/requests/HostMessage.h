@@ -7,11 +7,6 @@
 #include "../../dll.h"
 
 class HostMessage {
-private:
-    std::string pairCode;
-    std::string operationType;
-    std::string message;
-
 public:
     HostMessage();
 

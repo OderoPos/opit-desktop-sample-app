@@ -3,13 +3,6 @@
 #include "Result.h"
 
 class PaymentResult : public Result {
-private:
-    double amount = 0;
-    std::string currency;
-    bool paymentStatus = false;
-    std::string receiptNo;
-    std::string uniqueId;
-
 public:
     PaymentResult();
 

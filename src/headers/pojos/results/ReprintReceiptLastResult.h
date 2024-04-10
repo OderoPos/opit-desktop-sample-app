@@ -3,10 +3,6 @@
 #include "Result.h"
 
 class ReprintReceiptLastResult : public Result {
-private:
-    std::string result;
-    std::string uniqueId;
-
 public:
     ReprintReceiptLastResult();
 
