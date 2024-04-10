@@ -49,6 +49,7 @@ int __cdecl main(int argc, char** argv) {
 		std::cin >> option;
 
 		if (option < 1 || option > 9) {
+			std::cin.clear();
 			std::cout << "Wrong choice." << std::endl;
 			return 0;
 		}
@@ -112,6 +113,8 @@ void sale() {
 	std::cout << "Insert amount: ";
 	double amount;
 	std::cin >> amount;
+	std::cin.clear();
+
 	thread.sendPaymentRequest(amount, "RON", UNIQUE_ID);
 }
 
@@ -120,6 +123,8 @@ void doVoid() {
 	std::cout << "Insert receipt number: ";
 	std::string receiptNo;
 	std::cin >> receiptNo;
+	std::cin.clear();
+
 	thread.voidReceipt(receiptNo.c_str(), UNIQUE_ID);
 }
 
@@ -133,6 +138,8 @@ void reprintReceiptById() {
 	std::cout << "Insert receipt number: ";
 	std::string receiptNo;
 	std::cin >> receiptNo;
+	std::cin.clear();
+
 	thread.reprintReceiptNo(receiptNo.c_str(), UNIQUE_ID);
 }
 
