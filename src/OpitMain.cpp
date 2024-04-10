@@ -29,6 +29,8 @@ int __cdecl main(int argc, char** argv) {
 
 	if (!thread.isConnected()) {
 		std::cout << "Could not connect to pos" << std::endl;
+		std::cout << "Program has exit. Press ENTER to close the window." << std::endl;
+		getchar();
 		return 0;
 	}
 
@@ -58,6 +60,8 @@ int __cdecl main(int argc, char** argv) {
 
     } while (thread.isConnected());
 
+	std::cout << "Program has exit. Press ENTER to close the window." << std::endl;
+	getchar();
 	return 0;
 }
 
