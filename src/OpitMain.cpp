@@ -25,7 +25,7 @@ int __cdecl main(int argc, char** argv) {
 
 	thread.start();
 
-	Sleep(TWO_SECOND);
+	Sleep(ONE_SECOND);
 
 	if (!thread.isConnected()) {
 		std::cout << "Could not connect to pos" << std::endl;
