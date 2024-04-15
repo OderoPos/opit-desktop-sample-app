@@ -6,7 +6,11 @@
 #include "../../utils/Constants.h"
 #include "../../dll.h"
 
-class ClientMessage {
+class DllExport ClientMessage {
+private:
+    char* type;
+    char* message;
+
 public:
     ClientMessage();
 
@@ -17,12 +21,12 @@ public:
 
     ~ClientMessage();
 
-    std::string getType();
-    void setType(std::string type_);
-    std::string getMessage();
-    void setMessage(std::string message_);
+    const char* getType();
+    void setType(const char* type_);
+    const char* getMessage();
+    void setMessage(const char* message_);
     bool operator==(const ClientMessage& rhs);
-    const std::string toJson();
+    const char* toJson();
     static ClientMessage fromJson(const char* json);
     void toString();
 };

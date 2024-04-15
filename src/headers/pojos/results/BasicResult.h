@@ -2,7 +2,10 @@
 
 #include "Result.h"
 
-class BasicResult : public Result {
+class DllExport BasicResult : public Result {
+private:
+    char* result;
+
 public:
     BasicResult();
 
@@ -12,8 +15,10 @@ public:
 
     ~BasicResult();
 
+    const char* getResult();
+    void setResult(const char* result_);
     bool operator==(const BasicResult& rhs);
-    const std::string toJson();
+    const char* toJson();
     static BasicResult fromJson(const char* json);
     void toString();
 };

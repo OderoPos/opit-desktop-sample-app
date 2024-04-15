@@ -2,7 +2,12 @@
 
 #include "Result.h"
 
-class SimpleXResult : public Result {
+class DllExport SimpleXResult : public Result {
+private:
+    char* result;
+    char* currency;
+    char* uniqueId;
+
 public:
     SimpleXResult();
 
@@ -14,8 +19,14 @@ public:
 
     ~SimpleXResult();
 
+    const char* getResult();
+    void setResult(const char* result_);
+    const char* getCurrency();
+    void setCurrency(const char* currency_);
+    const char* getUniqueId();
+    void setUniqueId(const char* uniqueId_);
     bool operator==(const SimpleXResult& rhs);
-    const std::string toJson();
+    const char* toJson();
     static SimpleXResult fromJson(const char* json);
     void toString();
 };

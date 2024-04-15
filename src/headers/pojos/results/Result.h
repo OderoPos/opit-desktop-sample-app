@@ -6,7 +6,7 @@
 #include <cstring>
 #include "../../dll.h"
 
-class Result {
+class DllExport Result {
 public:
 	virtual void toString() {
 		assert(1 == 0); //force child classes to override this method

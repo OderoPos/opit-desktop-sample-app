@@ -2,7 +2,11 @@
 
 #include "Request.h"
 
-class ReceiptRequest : public Request {
+class DllExport ReceiptRequest : public Request {
+private:
+    char* receiptNo;
+    char* uniqueId;
+
 public:
     ReceiptRequest();
 
@@ -13,8 +17,12 @@ public:
 
     ~ReceiptRequest();
 
+    const char* getReceiptNo();
+    void setReceiptNo(const char* receiptNo_);
+    const char* getUniqueId();
+    void setUniqueId(const char* uniqueId_);
     bool operator==(const ReceiptRequest& rhs);
-    const std::string toJson();
+    const char* toJson();
     static ReceiptRequest fromJson(const char* json);
     void toString();
 };

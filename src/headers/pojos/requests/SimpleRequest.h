@@ -2,7 +2,10 @@
 
 #include "Request.h"
 
-class SimpleRequest : public Request {
+class DllExport SimpleRequest : public Request {
+private:
+    char* uniqueId;
+
 public:
     SimpleRequest();
 
@@ -12,8 +15,10 @@ public:
 
     ~SimpleRequest();
 
+    const char* getUniqueId();
+    void setUniqueId(const char* uniqueId_);
     bool operator==(const SimpleRequest& rhs);
-    const std::string toJson();
+    const char* toJson();
     static SimpleRequest fromJson(const char* json);
     void toString();
 };

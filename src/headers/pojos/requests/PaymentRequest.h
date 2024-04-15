@@ -2,7 +2,13 @@
 
 #include "Request.h"
 
-class PaymentRequest : Request {
+class DllExport PaymentRequest : Request {
+private:
+    double amount = 0;
+    char* currency;
+    char* currencyCode;
+    char* uniqueId;
+
 public:
     PaymentRequest();
 
@@ -15,8 +21,16 @@ public:
 
     ~PaymentRequest();
 
+    double getAmount();
+    void setAmount(double amount_);
+    const char* getCurrency();
+    void setCurrency(const char* currency_);
+    const char* getCurrencyCode();
+    void setCurrencyCode(const char* currencyCode_);
+    const char* getUniqueId();
+    void setUniqueId(const char* uniqueId_);
     bool operator==(const PaymentRequest& rhs);
-    const std::string toJson();
+    const char* toJson();
     static PaymentRequest fromJson(const char* json);
     void toString();
 };

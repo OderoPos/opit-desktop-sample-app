@@ -150,7 +150,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>OpitUsbDesktop.lib;libusb-1.0.27.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OpitUsbDesktop.lib;OpitCoreDesktop.lib;libusb-1.0.27.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Users\token01\Downloads\opit-desktop-sample-app;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

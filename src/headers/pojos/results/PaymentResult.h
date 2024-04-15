@@ -2,7 +2,14 @@
 
 #include "Result.h"
 
-class PaymentResult : public Result {
+class DllExport PaymentResult : public Result {
+private:
+    double amount = 0;
+    char* currency;
+    bool paymentStatus = false;
+    char* receiptNo;
+    char* uniqueId;
+
 public:
     PaymentResult();
 
@@ -16,8 +23,18 @@ public:
 
     ~PaymentResult();
 
+    double getAmount();
+    void setAmount(double amount_);
+    const char* getCurrency();
+    void setCurrency(const char* currency_);
+    bool getPaymentStatus();
+    void setPaymentStatus(bool paymentStatus_);
+    const char* getReceiptNo();
+    void setReceiptNo(const char* receiptNo_);
+    const char* getUniqueId();
+    void setUniqueId(const char* uniqueId_);
     bool operator==(const PaymentResult& rhs);
-    const std::string toJson();
+    const char* toJson();
     static PaymentResult fromJson(const char* json);
     void toString();
 };

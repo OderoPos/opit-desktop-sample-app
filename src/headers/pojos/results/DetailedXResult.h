@@ -2,7 +2,12 @@
 
 #include "Result.h"
 
-class DetailedXResult : public Result {
+class DllExport DetailedXResult : public Result {
+private:
+    char* result;
+    char* currency;
+    char* uniqueId;
+
 public:
     DetailedXResult();
 
@@ -14,8 +19,14 @@ public:
 
     ~DetailedXResult();
 
+    const char* getResult();
+    void setResult(const char* result_);
+    const char* getCurrency();
+    void setCurrency(const char* currency_);
+    const char* getUniqueId();
+    void setUniqueId(const char* uniqueId_);
     bool operator==(const DetailedXResult& rhs);
-    const std::string toJson();
+    const char* toJson();
     static DetailedXResult fromJson(const char* json);
     void toString();
 };

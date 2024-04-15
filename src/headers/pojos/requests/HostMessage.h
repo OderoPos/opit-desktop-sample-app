@@ -6,7 +6,12 @@
 #include "../../utils/Constants.h"
 #include "../../dll.h"
 
-class HostMessage {
+class DllExport HostMessage {
+private:
+    char* pairCode;
+    char* operationType;
+    char* message;
+
 public:
     HostMessage();
 
@@ -18,8 +23,14 @@ public:
 
     ~HostMessage();
 
+    const char* getPairCode();
+    void setPairCode(const char* pairCode_);
+    const char* getOperationType();
+    void setOperationType(const char* operationType_);
+    const char* getMessage();
+    void setMessage(const char* message_);
     bool operator==(const HostMessage& rhs);
-    const std::string toJson();
+    const char* toJson();
     static HostMessage fromJson(const char* json);
     void toString();
 };
