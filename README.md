@@ -35,7 +35,7 @@ Tutorial on how to set up static ip on Windows can be found <a href="https://pur
 
 <br/>
 Below you can find the OPit Lan for Windows diagram.
-<p align="center"><img src="https://raw.githubusercontent.com/OderoPos/developer-docs/main/images/opit_lan_windows_diagram-08dd9580.jpeg" width=700></p>
+<p align="center"><img src="https://raw.githubusercontent.com/OderoPos/opit-desktop-sample-app/desktop_lan/images/opit_lan_windows_diagram-08dd9580.jpeg" width=700></p>
 
 <ol type="1">
   <li>OPit lan host on Odero POS terminal is started and the socket server is booted up.</li>
@@ -60,23 +60,23 @@ The client app side implementation is rather simple, only step 4 is required to 
   <li>Copy archive contents inside the sample project folder.</li>
   <li>Open the sample app project solution with Microsoft Visual Studio (make sure C++ module is installed).</li>
   <li>In Microsoft Visual Studio go to Project -> Properties -> C/C++ -> Command Line -> Additional Options -> add text: /std:c++latest
-<p align="center"><img src="https://raw.githubusercontent.com/OderoPos/developer-docs/main/images/1-c57c7976.png" width=700></p>
+<p align="center"><img src="https://raw.githubusercontent.com/OderoPos/opit-desktop-sample-app/desktop_lan/images/1-c57c7976.png" width=700></p>
   </li>
   <li>C/C++ -> General -> Additional Include Directories -> click on the dropdown -> Edit -> 
 in the popup press the 3 dots (...) button from the right -> Choose headers folder from the opit-desktop project -> Ok
-<p align="center"><img src="https://raw.githubusercontent.com/OderoPos/developer-docs/main/images/2a-f3a7b050.png" width=700></p>
-<p align="center"><img src="https://raw.githubusercontent.com/OderoPos/developer-docs/main/images/2b-e4d83d86.png" width=700></p>
+<p align="center"><img src="https://raw.githubusercontent.com/OderoPos/opit-desktop-sample-app/desktop_lan/images/2a-f3a7b050.png" width=700></p>
+<p align="center"><img src="https://raw.githubusercontent.com/OderoPos/opit-desktop-sample-app/desktop_lan/images/2b-e4d83d86.png" width=700></p>
   </li>
 
   <li>Linker -> Input -> Additional Dependencies -> click on the dropdown -> Edit -> add text: OpitDesktop.lib -> Ok
-<p align="center"><img src="https://raw.githubusercontent.com/OderoPos/developer-docs/main/images/3a-05caa5b3.png" width=700></p>
-<p align="center"><img src="https://raw.githubusercontent.com/OderoPos/developer-docs/main/images/3b-45cf7f51.png" width=700></p>
+<p align="center"><img src="https://raw.githubusercontent.com/OderoPos/opit-desktop-sample-app/desktop_lan/images/3a-05caa5b3.png" width=700></p>
+<p align="center"><img src="https://raw.githubusercontent.com/OderoPos/opit-desktop-sample-app/desktop_lan/images/3b-45cf7f51.png" width=700></p>
 </li>
 
   <li>Linker -> General -> Additional Library Directories -> click on the dropdown -> Edit -> 
 in the popup press the 3 dots (...) button from the right -> select the folder where the OpitDesktop.lib file is located -> Ok
-<p align="center"><img src="https://raw.githubusercontent.com/OderoPos/developer-docs/main/images/4a-d6d978e6.png" width=700></p>
-<p align="center"><img src="https://raw.githubusercontent.com/OderoPos/developer-docs/main/images/4b-5fcb9813.png" width=700></p>
+<p align="center"><img src="https://raw.githubusercontent.com/OderoPos/opit-desktop-sample-app/desktop_lan/images/4a-d6d978e6.png" width=700></p>
+<p align="center"><img src="https://raw.githubusercontent.com/OderoPos/opit-desktop-sample-app/desktop_lan/images/4b-5fcb9813.png" width=700></p>
 </li>
 
   <li>That's it! The solution should now build.</li>
