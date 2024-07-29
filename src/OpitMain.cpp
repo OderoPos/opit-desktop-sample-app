@@ -29,9 +29,7 @@ int __cdecl main(int argc, char** argv) {
 
 	if (!thread.isConnected()) {
 		std::cout << "Could not connect to pos" << std::endl;
-		std::cout << "Program has exit. Press ENTER to close the window." << std::endl;
-		getchar();
-		return 0;
+		return EXIT_FAILURE;
 	}
 
 	int option;
@@ -53,7 +51,7 @@ int __cdecl main(int argc, char** argv) {
 		if (option < 1 || option > 9) {
 			std::cin.clear();
 			std::cout << "Wrong choice." << std::endl;
-			return 0;
+			return EXIT_FAILURE;
 		}
 
 		resolveChooser(option);
@@ -62,7 +60,7 @@ int __cdecl main(int argc, char** argv) {
 
 	std::cout << "Program has exit. Press ENTER to close the window." << std::endl;
 	getchar();
-	return 0;
+	return EXIT_SUCCESS;
 }
 
 
