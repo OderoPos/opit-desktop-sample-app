@@ -1,9 +1,10 @@
 #pragma once
 
-#include <winrt/Windows.Data.Json.h>
+#include <iostream>
+#include <string>
+#include <cstring>
+#include "../../utils/Constants.h"
 #include "../../dll.h"
-
-using namespace winrt::Windows::Data::Json;
 
 class DllExport ClientMessage {
 private:
@@ -26,6 +27,6 @@ public:
     void setMessage(const char* message_);
     bool operator==(const ClientMessage& rhs);
     const char* toJson();
-    static ClientMessage fromJson(const char*& json);
+    static ClientMessage fromJson(const char* json);
     void toString();
 };

@@ -38,7 +38,7 @@ public:
     ~ClientThread();
 
     bool start();
-    bool getIsConnected();
+    bool isConnected();
     void sendPaymentRequest(double amount, const char* currency, const char* uniqueId);
     void printSettlement(const char* uniqueId);
     void printLastSettlement(const char* currency, const char* uniqueId);

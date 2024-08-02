@@ -1,6 +1,7 @@
 #pragma once
 
 #include <map>
+#include <cstring>
 #include "../dll.h"
 
 template<class Arg1, class Arg2, class Result>

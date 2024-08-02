@@ -5,7 +5,8 @@
 #include "../pojos/results/PaymentResult.h"
 #include "../dll.h"
 
-class DllExport InternalOpitResultListener {
+class DllExport 
+InternalOpitResultListener {
     OpitResultListener resultListener;
 
 public:

@@ -25,7 +25,7 @@ int __cdecl main(int argc, char** argv) {
 	int option;
 
     do {
-		if (!thread.getIsConnected()) {
+		if (!thread.isConnected()) {
 			while (!thread.start()) {
 				std::cout << "client ping" << std::endl;
 				Sleep(ONE_SECOND);

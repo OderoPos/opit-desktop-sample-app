@@ -1,9 +1,6 @@
 #pragma once
 
-#include <winrt/Windows.Data.Json.h>
 #include "Request.h"
-
-using namespace winrt::Windows::Data::Json;
 
 class DllExport CurrencyRequest : public Request {
 private:
@@ -30,6 +27,6 @@ public:
     void setUniqueId(const char* uniqueId_);
     bool operator==(const CurrencyRequest& rhs);
     const char* toJson();
-    static CurrencyRequest fromJson(const char*& json);
+    static CurrencyRequest fromJson(const char* json);
     void toString();
 };

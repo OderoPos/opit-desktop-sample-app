@@ -1,7 +1,32 @@
 #pragma once
 
-#ifdef OPIT_EXPORTS
-#define DllExport __declspec(dllexport)
+#pragma warning(disable : 4996)//warning regarding strncpy
+
+#if defined(_MSC_VER)
+//  Microsoft 
+#define EXPORT __declspec(dllexport)
+#define IMPORT __declspec(dllimport)
+
+#elif defined(__GNUC__)
+//  GCC
+#define EXPORT __attribute__((visibility("default")))
+#define IMPORT
+
+#elif defined(__clang__)
+//  CLANG
+#define EXPORT __attribute__((visibility("default")))
+#define IMPORT
+
 #else
-#define DllExport __declspec(dllimport)
+//  do nothing and hope for the best?
+#define EXPORT
+#define IMPORT
+#pragma warning Unknown dynamic link import/export semantics.
+#endif
+
+
+#ifdef OPIT_EXPORTS
+#define DllExport EXPORT
+#else
+#define DllExport IMPORT
 #endif

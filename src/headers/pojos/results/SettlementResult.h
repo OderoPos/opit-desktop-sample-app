@@ -1,9 +1,6 @@
 #pragma once
 
-#include <winrt/Windows.Data.Json.h>
 #include "Result.h"
-
-using namespace winrt::Windows::Data::Json;
 
 class DllExport SettlementResult : public Result {
 private:
@@ -26,6 +23,6 @@ public:
     void setUniqueId(const char* uniqueId_);
     bool operator==(const SettlementResult& rhs);
     const char* toJson();
-    static SettlementResult fromJson(const char*& json);
+    static SettlementResult fromJson(const char* json);
     void toString();
 };
