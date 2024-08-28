@@ -8,8 +8,8 @@
 #include <iostream>
 #include <map>
 #include <windows.h>
-#include "InternalOpitResultListener.h"
-#include "ClientServiceExtendedContract.h"
+#include "OpitResultListener.h"
+#include "ClientServiceContract.h"
 #include "../utils/Constants.h"
 #include "../utils/ClientUtils.h"
 #include "../utils/Debug.h"
@@ -29,13 +29,13 @@
 #define IP "192.168.1.1"
 #define PORT "5051"
 
-class DllExport ClientThread : ClientServiceExtendedContract {
+class DllExport OpitClient : ClientServiceContract {
 public:
-    explicit ClientThread(
+    explicit OpitClient(
         OpitResultListener& resultListener_
     );
 
-    ~ClientThread();
+    ~OpitClient();
 
     bool start();
     bool isConnected();
@@ -48,19 +48,4 @@ public:
     void getDetailedXReport(const char* currency, const char* uniqueId);
     void voidReceipt(const char* receiptNo, const char* uniqueId);
     void destroy();
-
-private:
-    volatile bool isThreadActive = true;
-    volatile bool isSocketConnected = false;
-    InternalOpitResultListener* internalOpitResultListener;
-    SOCKET connectSocket = INVALID_SOCKET;
-
-    bool openSocket();
-    //will create a new thread and run the startReadLoop method
-    void startReadThread(SOCKET* connectSocket);
-    DWORD WINAPI startReadLoop(LPVOID lpParam);
-    void processResponse(const char* str);
-    void doSuccess(const char* message);
-    template <typename T> void sendResult(const char* message);
-    template <typename T> void sendToHost(const char* json, T& request);
 };

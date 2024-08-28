@@ -1,7 +1,7 @@
 #pragma once
 
-#include "headers/main/ClientThread.h"
-#include "headers/main/OpitResultListener.h"
+#include "headers/main/OpitClient.h"
+#include "headers/main/ResultListener.h"
 #include "headers/utils/Sleep.hpp"
 
 BOOL WINAPI ExitHandlerRoutine(DWORD eventCode);
@@ -17,8 +17,8 @@ void resolveChooser(int option);
 
 #define UNIQUE_ID "73qyedhyecgyd7efyuaehudsjh"
 
-OpitResultListener resultListener;
-ClientThread thread(resultListener);
+ResultListener resultListener;
+OpitClient thread(resultListener);
 
 int __cdecl main(int argc, char** argv) {
 	SetConsoleCtrlHandler(ExitHandlerRoutine, TRUE);
@@ -45,7 +45,6 @@ int __cdecl main(int argc, char** argv) {
 			std::cout << "Choose option: ";
 
 			std::cin >> option;
-
 			resolveChooser(option);
 		}
 

@@ -1,6 +1,5 @@
 #pragma once
 
-#include <iostream>
 #include "../pojos/results/PaymentResult.h"
 #include "../pojos/results/VoidResult.h"
 #include "../pojos/results/ReprintReceiptLastResult.h"
