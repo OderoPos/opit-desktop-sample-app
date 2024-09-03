@@ -5,8 +5,7 @@
 #include "../dll.h"
 
 template<class Arg1, class Arg2, class Result>
-struct binary_function
-{
+struct binary_function {
 	using first_argument_type = Arg1;
 	using second_argument_type = Arg2;
 	using result_type = Result;

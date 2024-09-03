@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../pojos/results/PaymentResult.h"
-#include "../pojos/results/VoidResult.h"
-#include "../pojos/results/ReprintReceiptLastResult.h"
-#include "../pojos/results/ReprintReceiptNumberResult.h"
-#include "../pojos/results/DetailedXResult.h"
-#include "../pojos/results/SimpleXResult.h"
-#include "../pojos/results/LastSettlementResult.h"
-#include "../pojos/results/SettlementResult.h"
+#include "../pojos/results/bank/PaymentResult.h"
+#include "../pojos/results/bank/VoidResult.h"
+#include "../pojos/results/bank/ReprintReceiptLastResult.h"
+#include "../pojos/results/bank/ReprintReceiptNumberResult.h"
+#include "../pojos/results/bank/DetailedXResult.h"
+#include "../pojos/results/bank/SimpleXResult.h"
+#include "../pojos/results/bank/LastSettlementResult.h"
+#include "../pojos/results/bank/SettlementResult.h"
 #include "../dll.h"
 
 class DllExport 

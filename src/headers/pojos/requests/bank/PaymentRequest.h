@@ -1,10 +1,10 @@
 #pragma once
 
-#include "Request.h"
+#include "../Request.h"
 
 class DllExport PaymentRequest : Request {
 private:
-    double amount = 0;
+    double amount;
     char* currency;
     char* currencyCode;
     char* uniqueId;

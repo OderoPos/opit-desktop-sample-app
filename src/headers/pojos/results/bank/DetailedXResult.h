@@ -1,23 +1,23 @@
 #pragma once
 
-#include "Result.h"
+#include "../Result.h"
 
-class DllExport SimpleXResult : public Result {
+class DllExport DetailedXResult : public Result {
 private:
     char* result;
     char* currency;
     char* uniqueId;
 
 public:
-    SimpleXResult();
+    DetailedXResult();
 
-    explicit SimpleXResult(
+    explicit DetailedXResult(
         const char* result_,
         const char* currency_,
         const char* uniqueId_
     );
 
-    ~SimpleXResult();
+    ~DetailedXResult();
 
     const char* getResult();
     void setResult(const char* result_);
@@ -25,8 +25,8 @@ public:
     void setCurrency(const char* currency_);
     const char* getUniqueId();
     void setUniqueId(const char* uniqueId_);
-    bool operator==(const SimpleXResult& rhs);
+    bool operator==(const DetailedXResult& rhs);
     const char* toJson();
-    static SimpleXResult fromJson(const char* json);
+    static DetailedXResult fromJson(const char* json);
     void toString();
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Request.h"
+#include "../Request.h"
 
 class DllExport CurrencyRequest : public Request {
 private:

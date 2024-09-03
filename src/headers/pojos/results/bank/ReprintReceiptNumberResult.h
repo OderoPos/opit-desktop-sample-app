@@ -1,23 +1,23 @@
 #pragma once
 
-#include "Result.h"
+#include "../Result.h"
 
-class DllExport VoidResult : public Result {
+class DllExport ReprintReceiptNumberResult : public Result {
 private:
     char* result;
     char* receiptNo;
     char* uniqueId;
 
 public:
-    VoidResult();
+    ReprintReceiptNumberResult();
 
-    explicit VoidResult(
+    explicit ReprintReceiptNumberResult(
         const char* result_,
         const char* receiptNo_,
         const char* uniqueId_
     );
 
-    ~VoidResult();
+    ~ReprintReceiptNumberResult();
 
     const char* getResult();
     void setResult(const char* result_);
@@ -25,8 +25,8 @@ public:
     void setReceiptNo(const char* receiptNo_);
     const char* getUniqueId();
     void setUniqueId(const char* uniqueId_);
-    bool operator==(const VoidResult& rhs);
+    bool operator==(const ReprintReceiptNumberResult& rhs);
     const char* toJson();
-    static VoidResult fromJson(const char* json);
+    static ReprintReceiptNumberResult fromJson(const char* json);
     void toString();
 };

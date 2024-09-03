@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Result.h"
+#include "../Result.h"
 
 class DllExport LastSettlementResult : public Result {
 private:

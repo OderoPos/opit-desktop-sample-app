@@ -1,10 +1,10 @@
 #pragma once
 
-#include "Result.h"
+#include "../Result.h"
 
 class DllExport PaymentResult : public Result {
 private:
-    double amount = 0;
+    double amount;
     char* currency;
     bool paymentStatus = false;
     char* receiptNo;

@@ -12,6 +12,7 @@ static const char* TYPE_REQUEST_PAIR_CODE = "TYPE_REQUEST_PAIR_CODE";
 static const char* TYPE_RECEIVE_PAIR_CODE = "TYPE_RECEIVE_PAIR_CODE";
 static const char* TYPE_ERROR = "TYPE_ERROR";
 static const char* TYPE_SUCCESS = "TYPE_SUCCESS";
+static const char* TYPE_DISCONNECTED = "TYPE_DISCONNECTED";
 static const char* STATUS_TYPE = "status_type";
 
 static const char* TYPE_PAYMENT = "TYPE_PAYMENT";
@@ -22,6 +23,8 @@ static const char* TYPE_DETAILED_X_REPORT = "TYPE_DETAILED_X_REPORT";
 static const char* TYPE_REPRINT_RECEIPT_NO = "TYPE_REPRINT_RECEIPT_NO";
 static const char* TYPE_REPRINT_RECEIPT_LAST = "TYPE_REPRINT_RECEIPT_LAST";
 static const char* TYPE_VOID = "TYPE_VOID";
+static const char* TYPE_ECR_SCREEN_CMD = "TYPE_ECR_SCREEN_CMD";
+static const char* TYPE_ECR_FISCAL_CMD = "TYPE_ECR_FISCAL_CMD";
 static const char* OPERATION_TYPE = "operation_type";
 static const char* OPERATION_RESULT = "result";
 
