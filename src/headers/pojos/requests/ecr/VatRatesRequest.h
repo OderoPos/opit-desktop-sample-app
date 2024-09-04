@@ -12,7 +12,7 @@ public:
     VatRatesRequest();
 
     explicit VatRatesRequest(
-        const VatRate vatId_,
+        const VatRate::Value vatId_,
         const char* vatRate_
     );
 
@@ -22,6 +22,7 @@ public:
     void setVatId(const VatRate vatId_);
     const char* getVatRate();
     void setVatRate(const char* vatRate_);
+
     bool operator==(const VatRatesRequest& rhs);
     const char* toJson();
     static VatRatesRequest fromJson(const char* json);

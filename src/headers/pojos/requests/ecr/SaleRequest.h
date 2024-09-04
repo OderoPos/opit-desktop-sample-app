@@ -59,6 +59,6 @@ public:
 
     bool operator==(const SaleRequest& rhs);
     const char* toJson();
-    static SaleRequest* fromJson(const char* json);
+    static SaleRequest fromJson(const char* json);
     void toString();
 };

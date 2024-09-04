@@ -4,23 +4,23 @@
 #include <stdexcept>
 #include <cstring>
 
-class DllExport ReportSize {
+class DllExport PagePosition {
 public:
     enum Value : size_t {
-        Compressed,
-        Extended
+        Head,
+        Foot
     };
 
-    ReportSize();
+    PagePosition();
 
-    explicit ReportSize(
+    explicit PagePosition(
         Value value_
     );
 
     const char* getName();
     Value* getValue();
     static Value getEnum(const char* name);
-    bool operator==(const ReportSize& rhs);
+    bool operator==(const PagePosition& rhs);
 
 private:
     Value* value;

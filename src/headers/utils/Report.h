@@ -26,6 +26,7 @@ public:
     );
 
     const char* getName();
+    Value* getValue();
     static Value getEnum(const char* name);
     bool operator==(const Report& rhs);
 

@@ -20,7 +20,7 @@ public:
         const char* name_,
         const char* um_,
         const char* quantity_,
-        const VatRate vatId_,
+        const VatRate::Value vatId_,
         const int discountSign_,
         const int discountType_,
         const char* discountValue_
@@ -42,6 +42,7 @@ public:
     void setDiscountType(const int discountType_);
     const char* getDiscountValue();
     void setDiscountValue(const char* discountValue_);
+
     bool operator==(const ProductsInfo& rhs);
     const char* toJson();
     static ProductsInfo fromJson(const char* json);

@@ -41,6 +41,16 @@ void ResultListener::onSettlementResult(Result& result) {
     result.toString();
 }
 
+void ResultListener::onFiscalCommandResult(Result& result) {
+    std::cout << "ResultListener onFiscalCommandResult: ";
+    result.toString();
+}
+
+void ResultListener::onScreenCommandResult(Result& result) {
+    std::cout << "ResultListener onScreenCommandResult: ";
+    result.toString();
+}
+
 void ResultListener::onPairingDone(bool isPaired) {
     std::cout << "ResultListener onPairingDone: " << isPaired << std::endl;
 }

@@ -11,6 +11,8 @@ class ResultListener : public OpitResultListener {
 	void onSimpleXReportResult(Result& result);
 	void onLastSettlementResult(Result& result);
 	void onSettlementResult(Result& result);
+	void onFiscalCommandResult(Result& result);
+	void onScreenCommandResult(Result& result);
 	void onPairingDone(bool isPaired);
 	void onError(const char* msg);
 	void onDisconnected();

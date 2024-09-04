@@ -61,7 +61,7 @@ public:
     void getDetailedXReport(const char* currency, const char* uniqueId);
     void voidReceipt(const char* receiptNo, const char* uniqueId);
 
-    void ecrCommandRequest(const CmdCode cmdCode, const char* param1, const char* param2);
+    void ecrCommandRequest(const CmdCode::Value cmdCode, const char* param1, const char* param2);
     void ecrSaleRequest(
         SaleInfo* saleInfo,
         CustomerInfo* customerInfo,
@@ -92,6 +92,7 @@ public:
         const char* fiscalSeries);
 
     void ecrSetDateTimeRequest(const char* value);
-    void ecrVatRatesRequest(const VatRate vatId, const char* vatRate);
+    void ecrVatRatesRequest(const VatRate::Value vatId, const char* vatRate);
+
     void destroy();
 };

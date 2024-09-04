@@ -14,7 +14,7 @@ public:
     TotalAdjustments();
 
     explicit TotalAdjustments(
-        const VatRate vatId_,
+        const VatRate::Value vatId_,
         const int discountSign_,
         const int discountType_,
         const char* discountValue_
@@ -30,6 +30,7 @@ public:
     void setDiscountType(const int discountType_);
     const char* getDiscountValue();
     void setDiscountValue(const char* discountValue_);
+
     bool operator==(const TotalAdjustments& rhs);
     const char* toJson();
     static TotalAdjustments fromJson(const char* json);

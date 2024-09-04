@@ -77,9 +77,6 @@
     <ClInclude Include="src\headers\dll.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\headers\main\ResultListener.h">
-      <Filter>Header Files\main</Filter>
-    </ClInclude>
     <ClInclude Include="src\headers\pojos\requests\bank\CurrencyRequest.h">
       <Filter>Header Files\pojos\requests\bank</Filter>
     </ClInclude>
@@ -187,6 +184,9 @@
     </ClInclude>
     <ClInclude Include="src\headers\utils\VatRate.h">
       <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\main\ResultListener.h">
+      <Filter>Header Files\main</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -25,8 +25,10 @@ static const char* TYPE_REPRINT_RECEIPT_LAST = "TYPE_REPRINT_RECEIPT_LAST";
 static const char* TYPE_VOID = "TYPE_VOID";
 static const char* TYPE_ECR_SCREEN_CMD = "TYPE_ECR_SCREEN_CMD";
 static const char* TYPE_ECR_FISCAL_CMD = "TYPE_ECR_FISCAL_CMD";
-static const char* OPERATION_TYPE = "operation_type";
-static const char* OPERATION_RESULT = "result";
 
-static const int NOTIFICATION_ID_HOST = 101;
-static const int NOTIFICATION_ID_CLIENT = 102;
+static const char* OPERATION_TYPE = "operation_type";
+
+static const char* RESULT_TYPE_FISCAL_CMD_SUCCESS = "ro.odero.ecr330.RESULT_TYPE_FISCAL_CMD_SUCCESS";
+static const char* RESULT_TYPE_FISCAL_CMD_FAILED = "ro.odero.ecr330.RESULT_TYPE_FISCAL_CMD_FAILED";
+static const char* RESULT_TYPE_UPDATE_SCREEN_SUCCESS = "ro.odero.ecr330.RESULT_TYPE_UPDATE_SCREEN_SUCCESS";
+static const char* RESULT_TYPE_UPDATE_SCREEN_FAILED = "ro.odero.ecr330.RESULT_TYPE_UPDATE_SCREEN_FAILED";

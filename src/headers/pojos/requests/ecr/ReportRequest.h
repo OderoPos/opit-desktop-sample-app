@@ -18,8 +18,8 @@ public:
     ReportRequest();
 
     explicit ReportRequest(
-        Report* type_,
-        ReportSize* size_,
+        Report::Value* type_,
+        ReportSize::Value * size_,
         const char* startDate_,
         const char* stopDate_,
         int* startZ_,
@@ -43,6 +43,7 @@ public:
     void setStopZ(int* stopZ_);
     const char* getMedia();
     void setMedia(const char* media_);
+
     bool operator==(const ReportRequest& rhs);
     const char* toJson();
     static ReportRequest fromJson(const char* json);

@@ -13,7 +13,7 @@ public:
     CommandRequest();
 
     explicit CommandRequest(
-        const CmdCode cmdCode_,
+        const CmdCode::Value cmdCode_,
         const char* param1_,
         const char* param2_
     );
