@@ -24,7 +24,7 @@ public:
     virtual void getDetailedXReport(const char* currency, const char* uniqueId);
     virtual void voidReceipt(const char* receiptNo, const char* uniqueId);
 
-    virtual void ecrCommandRequest(const CmdCode::Value cmdCode, const char* param1, const char* param2);
+    virtual void ecrCommandRequest(const CmdCode::Value cmdCode, const char* param1, const char* param2, const char* uniqueId);
     virtual void ecrReportRequest(
         const Report::Value type,
         const ReportSize::Value size,
@@ -32,14 +32,16 @@ public:
         const char* stopDate,
         const int startZ,
         const int stopZ,
-        const char* media);
+        const char* media,
+        const char* uniqueId);
 
-    virtual void ecrScreenRequest(const char* value);
+    virtual void ecrScreenRequest(const char* value, const char* uniqueId);
     virtual void ecrSetCompanyRequest(
         const char* name,
         const char* address,
         const char* cui,
-        const char* fiscalSeries);
+        const char* fiscalSeries,
+        const char* uniqueId);
 
     virtual void ecrSaleRequest(
         SaleInfo* saleInfo,
@@ -51,9 +53,10 @@ public:
         FreeTextInfo* freeTexts,
         int freeTextSize,
         TotalAdjustments* discounts,
-        int discountSize
+        int discountSize,
+        const char* uniqueId
     );
 
-    virtual void ecrSetDateTimeRequest(const char* value);
-    virtual void ecrVatRatesRequest(const VatRate::Value vatId, const char* vatRate);
+    virtual void ecrSetDateTimeRequest(const char* value, const char* uniqueId);
+    virtual void ecrVatRatesRequest(const VatRate::Value vatId, const char* vatRate, const char* uniqueId);
 };

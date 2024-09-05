@@ -61,7 +61,7 @@ public:
     void getDetailedXReport(const char* currency, const char* uniqueId);
     void voidReceipt(const char* receiptNo, const char* uniqueId);
 
-    void ecrCommandRequest(const CmdCode::Value cmdCode, const char* param1, const char* param2);
+    void ecrCommandRequest(const CmdCode::Value cmdCode, const char* param1, const char* param2, const char* uniqueId);
     void ecrSaleRequest(
         SaleInfo* saleInfo,
         CustomerInfo* customerInfo,
@@ -72,27 +72,29 @@ public:
         FreeTextInfo* freeTexts,
         int freeTextSize,
         TotalAdjustments* discounts,
-        int discountSize
+        int discountSize,
+        const char* uniqueId
     );
 
-    void ecrTechnicalReport();
-    void ecrZReport();
-    void ecrXReport();
-    void ecrInitJournal();
-    void ecrJournal(const char* startDate, const char* stopDate);
-    void ecrXJournal();
-    void ecrCustomerData();
-    void ecrPeriodicReportByDate(const char* startDate, const char* stopDate);
-    void ecrPeriodicReportByZ(int* startZ, int* stopZ);
-    void ecrScreenRequest(const char* value);
+    void ecrTechnicalReport(const char* uniqueId);
+    void ecrZReport(const char* uniqueId);
+    void ecrXReport(const char* uniqueId);
+    void ecrInitJournal(const char* uniqueId);
+    void ecrJournal(const char* startDate, const char* stopDate, const char* uniqueId);
+    void ecrXJournal(const char* uniqueId);
+    void ecrCustomerData(const char* uniqueId);
+    void ecrPeriodicReportByDate(const char* startDate, const char* stopDate, const char* uniqueId);
+    void ecrPeriodicReportByZ(int* startZ, int* stopZ, const char* uniqueId);
+    void ecrScreenRequest(const char* value, const char* uniqueId);
     void ecrSetCompanyRequest(
         const char* name,
         const char* address,
         const char* cui,
-        const char* fiscalSeries);
+        const char* fiscalSeries,
+        const char* uniqueId);
 
-    void ecrSetDateTimeRequest(const char* value);
-    void ecrVatRatesRequest(const VatRate::Value vatId, const char* vatRate);
+    void ecrSetDateTimeRequest(const char* value, const char* uniqueId);
+    void ecrVatRatesRequest(const VatRate::Value vatId, const char* vatRate, const char* uniqueId);
 
     void destroy();
 };

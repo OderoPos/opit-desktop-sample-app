@@ -108,11 +108,7 @@ void resolveChooser(int option) {
 		case 20: ecrSetDateTime(); break;
 		case 21: ecrSetVatRates(); break;
 		case 22: ecrScreenRequest(); break;
-		case 23: {
-			opit.destroy();
-			ExitProcess(0);
-			break;
-		}
+		case 23: opit.destroy(); ExitProcess(0); break;
 		default: {
 			std::cout << "Unknown choice" << std::endl;
 			break;
@@ -165,7 +161,7 @@ void ecrCommandRequest() {
 	const char* param1 = "";//horia bookmark
 	const char* param2 = "";
 
-	opit.ecrCommandRequest(CmdCode::JournalInit, param1, param2);
+	opit.ecrCommandRequest(CmdCode::JournalInit, param1, param2, UNIQUE_ID);
 }
 
 void ecrSaleRequest() {
@@ -185,7 +181,7 @@ void ecrSaleRequest() {
 	};
 
 	const int freeTextSize = 2;
-	FreeTextInfo* freeTexts = new FreeTextInfo[freeTextSize]{
+	FreeTextInfo* freeTexts = new FreeTextInfo[freeTextSize] {
 		FreeTextInfo("Welcome", PagePosition::Head),
 		FreeTextInfo("Goodbye!", PagePosition::Foot)
 	};
@@ -201,8 +197,7 @@ void ecrSaleRequest() {
 		products, productSize,
 		payments, paymentSize,
 		freeTexts, freeTextSize,
-		discounts, discountSize
-	);
+		discounts, discountSize, UNIQUE_ID);
 
 	delete saleInfo;
 	delete customerInfo;
@@ -213,48 +208,48 @@ void ecrSaleRequest() {
 }
 
 void ecrTechnicalReport() {
-	opit.ecrTechnicalReport();
+	opit.ecrTechnicalReport(UNIQUE_ID);
 }
 
 void ecrZReport() {
-	opit.ecrZReport();
+	opit.ecrZReport(UNIQUE_ID);
 }
 
 void ecrXReport() {
-	opit.ecrXReport();
+	opit.ecrXReport(UNIQUE_ID);
 }
 
 void ecrInitJournal() {
-	opit.ecrInitJournal();
+	opit.ecrInitJournal(UNIQUE_ID);
 }
 
 void ecrJournal() {//YYMMddHHmmss
 	const char* startDate = "240801010101";
 	const char* stopDate = "240801010101";
 
-	opit.ecrJournal(startDate, stopDate);
+	opit.ecrJournal(startDate, stopDate, UNIQUE_ID);
 }
 
 void ecrXJournal() {
-	opit.ecrXJournal();
+	opit.ecrXJournal(UNIQUE_ID);
 }
 
 void ecrCustomerData() {
-	opit.ecrCustomerData();
+	opit.ecrCustomerData(UNIQUE_ID);
 }
 
 void ecrPeriodicReportByDate() {//YYMMddHHmmss
 	const char* startDate = "240801010101";
 	const char* stopDate = "240801010101";
 
-	opit.ecrPeriodicReportByDate(startDate, stopDate);
+	opit.ecrPeriodicReportByDate(startDate, stopDate, UNIQUE_ID);
 }
 
 void ecrPeriodicReportByZ() {
 	int* startZ = new int(7);
 	int* stopZ = new int(14);
 
-	opit.ecrPeriodicReportByZ(startZ, stopZ);
+	opit.ecrPeriodicReportByZ(startZ, stopZ, UNIQUE_ID);
 }
 
 void ecrSetCompany() {
@@ -263,23 +258,23 @@ void ecrSetCompany() {
 	const char* cui = "43511483";
 	const char* fiscalSeries = "1234567890";
 
-	opit.ecrSetCompanyRequest(name, address, cui, fiscalSeries);
+	opit.ecrSetCompanyRequest(name, address, cui, fiscalSeries, UNIQUE_ID);
 }
 
 void ecrSetDateTime() {//YYMMddHHmmss
 	const char* value = "240901010101";
 
-	opit.ecrSetDateTimeRequest(value);
+	opit.ecrSetDateTimeRequest(value, UNIQUE_ID);
 }
 
 void ecrSetVatRates() {
-	opit.ecrVatRatesRequest(VatRate::D, "9.00");
+	opit.ecrVatRatesRequest(VatRate::D, "9.00", UNIQUE_ID);
 }
 
 void ecrScreenRequest() {
 	const char* value = "111";
 
-	opit.ecrScreenRequest(value);
+	opit.ecrScreenRequest(value, UNIQUE_ID);
 }
 
 BOOL WINAPI ExitHandlerRoutine(DWORD eventCode) {
