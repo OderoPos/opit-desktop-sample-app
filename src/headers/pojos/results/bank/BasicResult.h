@@ -10,7 +10,8 @@ public:
     BasicResult();
 
     explicit BasicResult(
-        const char* result_
+        const char* result_,
+        const char* uniqueId_
     );
 
     ~BasicResult();

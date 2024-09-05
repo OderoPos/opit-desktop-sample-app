@@ -188,9 +188,6 @@
     <ClInclude Include="src\headers\pojos\results\ecr\DateTime.h">
       <Filter>Header Files\pojos\results\ecr</Filter>
     </ClInclude>
-    <ClInclude Include="src\headers\pojos\results\ecr\EcrResult.h">
-      <Filter>Header Files\pojos\results\ecr</Filter>
-    </ClInclude>
     <ClInclude Include="src\headers\pojos\results\ecr\FailedCommand.h">
       <Filter>Header Files\pojos\results\ecr</Filter>
     </ClInclude>

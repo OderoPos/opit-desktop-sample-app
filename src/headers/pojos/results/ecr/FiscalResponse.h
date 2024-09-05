@@ -3,7 +3,7 @@
 #include "../Result.h"
 #include "FiscalResponseValue.h"
 
-class DllExport FiscalResponse : public Result {
+class DllExport FiscalResponse {
 private:
     FiscalResponseValue* fiscalResponseValue;
 

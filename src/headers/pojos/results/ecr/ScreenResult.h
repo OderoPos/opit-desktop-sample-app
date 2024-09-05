@@ -11,7 +11,8 @@ public:
     ScreenResult();
 
     explicit ScreenResult(
-        ScreenResponseValue* screenResponseValue
+        ScreenResponseValue* screenResponseValue,
+        const char* uniqueId_
     );
 
     ~ScreenResult();

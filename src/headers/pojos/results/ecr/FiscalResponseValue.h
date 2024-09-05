@@ -2,7 +2,7 @@
 
 #include "../Result.h"
 
-class DllExport FiscalResponseValue : public Result {
+class DllExport FiscalResponseValue {
 private:
     int code;
     char* description;

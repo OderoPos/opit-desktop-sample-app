@@ -6,7 +6,6 @@ class DllExport ReprintReceiptNumberResult : public Result {
 private:
     char* result;
     char* receiptNo;
-    char* uniqueId;
 
 public:
     ReprintReceiptNumberResult();
@@ -21,10 +20,10 @@ public:
 
     const char* getResult();
     void setResult(const char* result_);
+
     const char* getReceiptNo();
     void setReceiptNo(const char* receiptNo_);
-    const char* getUniqueId();
-    void setUniqueId(const char* uniqueId_);
+
     bool operator==(const ReprintReceiptNumberResult& rhs);
     const char* toJson();
     static ReprintReceiptNumberResult fromJson(const char* json);

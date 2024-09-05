@@ -14,7 +14,8 @@ public:
 
     explicit FiscalResult(
         FiscalResponse* fiscalResponse_,
-        FailedCommand* failedCommand_
+        FailedCommand* failedCommand_,
+        const char* uniqueId_
     );
 
     ~FiscalResult();

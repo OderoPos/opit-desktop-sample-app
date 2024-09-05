@@ -3,7 +3,7 @@
 #include "../Result.h"
 #include "DateTime.h"
 
-class DllExport FailedCommand : public Result {
+class DllExport FailedCommand {
 private:
     DateTime* dateTime;
 

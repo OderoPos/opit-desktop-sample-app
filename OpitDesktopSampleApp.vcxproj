@@ -58,7 +58,6 @@
     <ClInclude Include="src\headers\pojos\results\bank\SimpleXResult.h" />
     <ClInclude Include="src\headers\pojos\results\bank\VoidResult.h" />
     <ClInclude Include="src\headers\pojos\results\ecr\DateTime.h" />
-    <ClInclude Include="src\headers\pojos\results\ecr\EcrResult.h" />
     <ClInclude Include="src\headers\pojos\results\ecr\FailedCommand.h" />
     <ClInclude Include="src\headers\pojos\results\ecr\FiscalResponse.h" />
     <ClInclude Include="src\headers\pojos\results\ecr\FiscalResponseValue.h" />

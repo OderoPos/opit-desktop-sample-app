@@ -2,7 +2,7 @@
 
 #include "../Result.h"
 
-class DllExport ScreenResponseValue : public Result {
+class DllExport ScreenResponseValue {
 private:
     bool successful;
     char* failedText;

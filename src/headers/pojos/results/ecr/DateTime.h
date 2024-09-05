@@ -2,7 +2,7 @@
 
 #include "../Result.h"
 
-class DllExport DateTime : public Result {
+class DllExport DateTime {
 private:
     char* value;
 
