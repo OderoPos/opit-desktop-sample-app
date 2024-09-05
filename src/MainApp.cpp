@@ -162,7 +162,7 @@ void startSettlement() {
 }
 
 void ecrCommandRequest() {
-	const char* param1 = ""; sasa
+	const char* param1 = "";//horia bookmark
 	const char* param2 = "";
 
 	opit.ecrCommandRequest(CmdCode::JournalInit, param1, param2);
@@ -172,25 +172,29 @@ void ecrSaleRequest() {
 	SaleInfo* saleInfo = new SaleInfo(1, "Employee 1");
 	CustomerInfo* customerInfo = new CustomerInfo("RO1592512");
 
-	ProductsInfo* products = new ProductsInfo[2];
-	products[0] = ProductsInfo("Chocolate", "pcs", "10", VatRate::D, 0, 0, 0);
-	products[1] = ProductsInfo("Banana", "pcs", "2", VatRate::E, 0, 0, 0);
-	int productSize = 2;
+	const int productSize = 2;
+	ProductsInfo* products = new ProductsInfo[productSize] {
+		ProductsInfo("Chocolate", "pcs", "10", VatRate::D, 0, 0, "0"),
+		ProductsInfo("Banana", "pcs", "2", VatRate::E, 0, 0, "0")
+	};
 
-	PaymentsInfo* payments = new PaymentsInfo[2];
-	payments[0] = PaymentsInfo(0, "1,00");
-	payments[1] = PaymentsInfo(0, "3,33");
-	int paymentSize = 2;
+	const int paymentSize = 2;
+	PaymentsInfo* payments = new PaymentsInfo[paymentSize] {
+		PaymentsInfo(0, "1,00"),
+		PaymentsInfo(0, "3,33")
+	};
 
-	FreeTextInfo* freeTexts = new FreeTextInfo[2];
-	freeTexts[0] = FreeTextInfo("Welcome", PagePosition::Head);
-	freeTexts[1] = FreeTextInfo("Goodbye!", PagePosition::Foot);
-	int freeTextSize = 2;
-
-	TotalAdjustments* discounts = new TotalAdjustments[2];
-	discounts[0] = TotalAdjustments(VatRate::D, 0, 0, "1");
-	discounts[1] = TotalAdjustments(VatRate::A, 1, 2, "3");
-	int discountSize = 2;
+	const int freeTextSize = 2;
+	FreeTextInfo* freeTexts = new FreeTextInfo[freeTextSize]{
+		FreeTextInfo("Welcome", PagePosition::Head),
+		FreeTextInfo("Goodbye!", PagePosition::Foot)
+	};
+	
+	const int discountSize = 2;
+	TotalAdjustments* discounts = new TotalAdjustments[discountSize] {
+		TotalAdjustments(VatRate::D, 0, 0, "1"),
+		TotalAdjustments(VatRate::A, 1, 2, "3")
+	};
 
 	opit.ecrSaleRequest(
 		saleInfo, customerInfo,
@@ -199,6 +203,13 @@ void ecrSaleRequest() {
 		freeTexts, freeTextSize,
 		discounts, discountSize
 	);
+
+	delete saleInfo;
+	delete customerInfo;
+	delete[] products;
+	delete[] payments;
+	delete[] freeTexts;
+	delete[] discounts;
 }
 
 void ecrTechnicalReport() {
