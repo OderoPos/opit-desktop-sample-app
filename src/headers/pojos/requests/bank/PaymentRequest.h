@@ -1,13 +1,12 @@
 #pragma once
 
-#include "Request.h"
+#include "../Request.h"
 
 class DllExport PaymentRequest : Request {
 private:
     double amount = 0;
-    char* currency;
-    char* currencyCode;
-    char* uniqueId;
+    char* currency = NULL;
+    char* currencyCode = NULL;
 
 public:
     PaymentRequest();
@@ -23,12 +22,13 @@ public:
 
     double getAmount();
     void setAmount(double amount_);
+
     const char* getCurrency();
     void setCurrency(const char* currency_);
+
     const char* getCurrencyCode();
     void setCurrencyCode(const char* currencyCode_);
-    const char* getUniqueId();
-    void setUniqueId(const char* uniqueId_);
+
     bool operator==(const PaymentRequest& rhs);
     const char* toJson();
     static PaymentRequest fromJson(const char* json);
