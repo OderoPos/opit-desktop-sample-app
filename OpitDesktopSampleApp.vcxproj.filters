@@ -164,9 +164,6 @@
     <ClInclude Include="src\headers\pojos\results\bank\VoidResult.h">
       <Filter>Header Files\pojos\results\bank</Filter>
     </ClInclude>
-    <ClInclude Include="src\headers\pojos\results\ecr\EcrResult.h">
-      <Filter>Header Files\pojos\results\ecr</Filter>
-    </ClInclude>
     <ClInclude Include="src\headers\utils\CmdCode.h">
       <Filter>Header Files\utils</Filter>
     </ClInclude>
@@ -187,6 +184,30 @@
     </ClInclude>
     <ClInclude Include="src\headers\pojos\results\bank\BasicResult.h">
       <Filter>Header Files\pojos\results\bank</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\ecr\DateTime.h">
+      <Filter>Header Files\pojos\results\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\ecr\EcrResult.h">
+      <Filter>Header Files\pojos\results\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\ecr\FailedCommand.h">
+      <Filter>Header Files\pojos\results\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\ecr\FiscalResponse.h">
+      <Filter>Header Files\pojos\results\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\ecr\FiscalResponseValue.h">
+      <Filter>Header Files\pojos\results\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\ecr\FiscalResult.h">
+      <Filter>Header Files\pojos\results\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\ecr\ScreenResponseValue.h">
+      <Filter>Header Files\pojos\results\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\ecr\ScreenResult.h">
+      <Filter>Header Files\pojos\results\ecr</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
