@@ -137,9 +137,6 @@
     <ClInclude Include="src\headers\pojos\requests\Request.h">
       <Filter>Header Files\pojos\requests</Filter>
     </ClInclude>
-    <ClInclude Include="src\headers\pojos\results\BasicResult.h">
-      <Filter>Header Files\pojos\results</Filter>
-    </ClInclude>
     <ClInclude Include="src\headers\pojos\results\Result.h">
       <Filter>Header Files\pojos\results</Filter>
     </ClInclude>
@@ -187,6 +184,9 @@
     </ClInclude>
     <ClInclude Include="src\headers\main\ResultListener.h">
       <Filter>Header Files\main</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\bank\BasicResult.h">
+      <Filter>Header Files\pojos\results\bank</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
