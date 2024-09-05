@@ -4,8 +4,8 @@
 
 class DllExport SaleInfo {
 private:
-    int posNo;
-    char* cashier;
+    int posNo = 0;
+    char* cashier = NULL;
 
 public:
     SaleInfo();
@@ -19,8 +19,10 @@ public:
 
     const int getPosNo();
     void setPosNo(const int posNo_);
+
     const char* getCashier();
     void setCashier(const char* cashier_);
+
     bool operator==(const SaleInfo& rhs);
     const char* toJson();
     static SaleInfo fromJson(const char* json);

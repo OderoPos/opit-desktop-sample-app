@@ -6,20 +6,22 @@
 class DllExport VatRatesRequest : public Request {
 private:
     VatRate vatId;
-    char* vatRate;
+    char* vatRate = NULL;
 
 public:
     VatRatesRequest();
 
     explicit VatRatesRequest(
         const VatRate::Value vatId_,
-        const char* vatRate_
+        const char* vatRate_,
+        const char* uniqueId_
     );
 
     ~VatRatesRequest();
 
     const VatRate getVatId();
     void setVatId(const VatRate vatId_);
+
     const char* getVatRate();
     void setVatRate(const char* vatRate_);
 

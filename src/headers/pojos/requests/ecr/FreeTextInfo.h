@@ -5,7 +5,7 @@
 
 class DllExport FreeTextInfo {
 private:
-    char* freeText;
+    char* freeText = NULL;
     PagePosition position;
 
 public:
@@ -20,6 +20,7 @@ public:
 
     const char* getFreeText();
     void setFreeText(const char* freeText_);
+
     const PagePosition getPosition();
     void setPosition(const PagePosition position_);
 

@@ -4,7 +4,7 @@
 
 class DllExport CustomerInfo {
 private:
-    char* cui;
+    char* cui = NULL;
 
 public:
     CustomerInfo();
@@ -17,6 +17,7 @@ public:
 
     const char* getCui();
     void setCui(const char* cui_);
+
     bool operator==(const CustomerInfo& rhs);
     const char* toJson();
     static CustomerInfo fromJson(const char* json);

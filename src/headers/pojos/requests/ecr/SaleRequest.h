@@ -10,12 +10,12 @@
 
 class DllExport SaleRequest : public Request {
 private:
-    SaleInfo* saleInfo;
-    CustomerInfo* customerInfo;
-    ProductsInfo* products;
-    PaymentsInfo* payments;
-    FreeTextInfo* freeTexts;
-    TotalAdjustments* discounts;
+    SaleInfo* saleInfo = NULL;
+    CustomerInfo* customerInfo = NULL;
+    ProductsInfo* products = NULL;
+    PaymentsInfo* payments = NULL;
+    FreeTextInfo* freeTexts = NULL;
+    TotalAdjustments* discounts = NULL;
     int productSize;
     int paymentSize;
     int freeTextSize;
@@ -34,7 +34,8 @@ public:
         FreeTextInfo* freeTexts_,
         int freeTextSize_,
         TotalAdjustments* discounts_,
-        int discountSize_
+        int discountSize_,
+        const char* uniqueId_
     );
 
     ~SaleRequest();

@@ -5,7 +5,7 @@
 class DllExport PaymentsInfo {
 private:
     int paymentMethodId;
-    char* value;
+    char* value = NULL;
 
 public:
     PaymentsInfo();
@@ -19,8 +19,10 @@ public:
 
     const int getPaymentMethodId();
     void setPaymentMethodId(const int paymentMethodId_);
+
     const char* getValue();
     void setValue(const char* value_);
+
     bool operator==(const PaymentsInfo& rhs);
     const char* toJson();
     static PaymentsInfo fromJson(const char* json);

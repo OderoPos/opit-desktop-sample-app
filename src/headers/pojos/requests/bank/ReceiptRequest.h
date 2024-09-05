@@ -4,8 +4,7 @@
 
 class DllExport ReceiptRequest : public Request {
 private:
-    char* receiptNo;
-    char* uniqueId;
+    char* receiptNo = NULL;
 
 public:
     ReceiptRequest();
@@ -19,8 +18,7 @@ public:
 
     const char* getReceiptNo();
     void setReceiptNo(const char* receiptNo_);
-    const char* getUniqueId();
-    void setUniqueId(const char* uniqueId_);
+
     bool operator==(const ReceiptRequest& rhs);
     const char* toJson();
     static ReceiptRequest fromJson(const char* json);

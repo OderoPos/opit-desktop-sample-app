@@ -18,10 +18,10 @@ public:
     );
 
     const char* getName();
-    Value* getValue();
+    Value getValue();
     static Value getEnum(const char* name);
     bool operator==(const PagePosition& rhs);
 
 private:
-    Value* value;
+    Value value;
 };

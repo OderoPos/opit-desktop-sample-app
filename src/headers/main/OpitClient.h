@@ -61,7 +61,13 @@ public:
     void getDetailedXReport(const char* currency, const char* uniqueId);
     void voidReceipt(const char* receiptNo, const char* uniqueId);
 
-    void ecrCommandRequest(const CmdCode::Value cmdCode, const char* param1, const char* param2, const char* uniqueId);
+    void ecrCommandRequest(
+        const CmdCode::Value cmdCode,
+        const char* param1,
+        const char* param2,
+        const char* uniqueId
+    );
+
     void ecrSaleRequest(
         SaleInfo* saleInfo,
         CustomerInfo* customerInfo,
@@ -86,6 +92,7 @@ public:
     void ecrPeriodicReportByDate(const char* startDate, const char* stopDate, const char* uniqueId);
     void ecrPeriodicReportByZ(int* startZ, int* stopZ, const char* uniqueId);
     void ecrScreenRequest(const char* value, const char* uniqueId);
+
     void ecrSetCompanyRequest(
         const char* name,
         const char* address,
