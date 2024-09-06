@@ -128,6 +128,8 @@ void sale() {
 	std::cout << "Insert amount: ";
 	double amount;
 	std::cin >> amount;
+	std::cin.clear();
+
 	opit.sendPaymentRequest(amount, "RON", UNIQUE_ID);
 }
 
@@ -135,6 +137,8 @@ void doVoid() {
 	std::cout << "Insert receipt number: ";
 	std::string receiptNo;
 	std::cin >> receiptNo;
+	std::cin.clear();
+
 	opit.voidReceipt(receiptNo.c_str(), UNIQUE_ID);
 }
 
@@ -146,6 +150,8 @@ void reprintReceiptById() {
 	std::cout << "Insert receipt number: ";
 	std::string receiptNo;
 	std::cin >> receiptNo;
+	std::cin.clear();
+
 	opit.reprintReceiptNo(receiptNo.c_str(), UNIQUE_ID);
 }
 
