@@ -74,12 +74,20 @@ int __cdecl main(int argc, char** argv) {
 			std::cout << "Choose option: ";
 
 			std::cin >> option;
+
+			if (option < 1 || option > 9) {
+				std::cin.clear();
+				std::cout << "Wrong choice." << std::endl;
+				return 0;
+			}
+
 			resolveChooser(option);
 		}
 
-		Sleep(ONE_SECOND);
-    } while (true);
+	} while (opit.isConnected());
 
+	std::cout << "Program has exit. Press ENTER to close the window." << std::endl;
+	getchar();
 	return 0;
 }
 
