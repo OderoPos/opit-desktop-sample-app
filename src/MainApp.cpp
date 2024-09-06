@@ -217,13 +217,6 @@ void ecrSaleRequest() {
 		payments, paymentSize,
 		freeTexts, freeTextSize,
 		discounts, discountSize, UNIQUE_ID);
-
-	delete saleInfo;
-	delete customerInfo;
-	delete[] products;
-	delete[] payments;
-	delete[] freeTexts;
-	delete[] discounts;
 }
 
 void ecrTechnicalReport() {
