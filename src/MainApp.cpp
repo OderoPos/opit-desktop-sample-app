@@ -1,7 +1,6 @@
 #pragma once
 
 #include "headers/main/OpitClient.h"
-#include "headers/thread/CppThread.hpp"
 #include "headers/main/ResultListener.h"
 #include "headers/utils/Sleep.hpp"
 
