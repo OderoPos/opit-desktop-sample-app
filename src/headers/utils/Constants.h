@@ -32,3 +32,6 @@ static const char* RESULT_TYPE_FISCAL_CMD_SUCCESS = "ro.odero.ecr330.RESULT_TYPE
 static const char* RESULT_TYPE_FISCAL_CMD_FAILED = "ro.odero.ecr330.RESULT_TYPE_FISCAL_CMD_FAILED";
 static const char* RESULT_TYPE_UPDATE_SCREEN_SUCCESS = "ro.odero.ecr330.RESULT_TYPE_UPDATE_SCREEN_SUCCESS";
 static const char* RESULT_TYPE_UPDATE_SCREEN_FAILED = "ro.odero.ecr330.RESULT_TYPE_UPDATE_SCREEN_FAILED";
+
+static const char* TYPE_MSG_BEGIN = "\"A\":\"begin\"";
+static const char* TYPE_MSG_END = "\"z\":\"end\"";
