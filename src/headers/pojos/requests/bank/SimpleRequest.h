@@ -1,10 +1,8 @@
 #pragma once
 
-#include "Request.h"
+#include "../Request.h"
 
 class DllExport SimpleRequest : public Request {
-private:
-    char* uniqueId;
 
 public:
     SimpleRequest();
@@ -15,8 +13,6 @@ public:
 
     ~SimpleRequest();
 
-    const char* getUniqueId();
-    void setUniqueId(const char* uniqueId_);
     bool operator==(const SimpleRequest& rhs);
     const char* toJson();
     static SimpleRequest fromJson(const char* json);

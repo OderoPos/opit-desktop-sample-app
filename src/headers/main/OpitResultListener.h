@@ -1,14 +1,15 @@
 #pragma once
 
-#include <iostream>
-#include "../pojos/results/PaymentResult.h"
-#include "../pojos/results/VoidResult.h"
-#include "../pojos/results/ReprintReceiptLastResult.h"
-#include "../pojos/results/ReprintReceiptNumberResult.h"
-#include "../pojos/results/DetailedXResult.h"
-#include "../pojos/results/SimpleXResult.h"
-#include "../pojos/results/LastSettlementResult.h"
-#include "../pojos/results/SettlementResult.h"
+#include "../pojos/results/bank/PaymentResult.h"
+#include "../pojos/results/bank/VoidResult.h"
+#include "../pojos/results/bank/ReprintReceiptLastResult.h"
+#include "../pojos/results/bank/ReprintReceiptNumberResult.h"
+#include "../pojos/results/bank/DetailedXResult.h"
+#include "../pojos/results/bank/SimpleXResult.h"
+#include "../pojos/results/bank/LastSettlementResult.h"
+#include "../pojos/results/bank/SettlementResult.h"
+#include "../pojos/results/ecr/ScreenResult.h"
+#include "../pojos/results/ecr/FiscalResult.h"
 #include "../dll.h"
 
 class DllExport 
@@ -22,8 +23,10 @@ public:
     void onSimpleXReportResult(Result& result);
     void onLastSettlementResult(Result& result);
     void onSettlementResult(Result& result);
+    void onFiscalCommandResult(Result& result);
+    void onScreenCommandResult(Result& result);
     void onPairingDone(bool isPaired);
-    void onError(std::string msg);
+    void onError(const char* msg);
     void onDisconnected();
     void onConnected();
 };

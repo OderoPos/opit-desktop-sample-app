@@ -1,14 +1,13 @@
 #pragma once
 
-#include "Result.h"
+#include "../Result.h"
 
 class DllExport PaymentResult : public Result {
 private:
-    double amount = 0;
+    double amount;
     char* currency;
     bool paymentStatus = false;
     char* receiptNo;
-    char* uniqueId;
 
 public:
     PaymentResult();
@@ -25,14 +24,16 @@ public:
 
     double getAmount();
     void setAmount(double amount_);
+
     const char* getCurrency();
     void setCurrency(const char* currency_);
+
     bool getPaymentStatus();
     void setPaymentStatus(bool paymentStatus_);
+
     const char* getReceiptNo();
     void setReceiptNo(const char* receiptNo_);
-    const char* getUniqueId();
-    void setUniqueId(const char* uniqueId_);
+
     bool operator==(const PaymentResult& rhs);
     const char* toJson();
     static PaymentResult fromJson(const char* json);

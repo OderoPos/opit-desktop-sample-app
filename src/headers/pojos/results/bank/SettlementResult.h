@@ -1,11 +1,10 @@
 #pragma once
 
-#include "Result.h"
+#include "../Result.h"
 
 class DllExport SettlementResult : public Result {
 private:
     char* result;
-    char* uniqueId;
 
 public:
     SettlementResult();
@@ -19,8 +18,7 @@ public:
 
     const char* getResult();
     void setResult(const char* result_);
-    const char* getUniqueId();
-    void setUniqueId(const char* uniqueId_);
+
     bool operator==(const SettlementResult& rhs);
     const char* toJson();
     static SettlementResult fromJson(const char* json);

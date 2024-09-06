@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Result.h"
+#include "../Result.h"
 
 class DllExport BasicResult : public Result {
 private:
@@ -10,13 +10,15 @@ public:
     BasicResult();
 
     explicit BasicResult(
-        const char* result_
+        const char* result_,
+        const char* uniqueId_
     );
 
     ~BasicResult();
 
     const char* getResult();
     void setResult(const char* result_);
+
     bool operator==(const BasicResult& rhs);
     const char* toJson();
     static BasicResult fromJson(const char* json);
