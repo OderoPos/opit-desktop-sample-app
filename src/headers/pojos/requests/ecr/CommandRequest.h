@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../Request.h"
-#include "../../../utils/CmdCode.h"
+#include "../../../utils/ecr/CmdCode.h"
 
 class DllExport CommandRequest : public Request {
 private:

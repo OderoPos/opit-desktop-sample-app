@@ -10,10 +10,6 @@
 #include <windows.h>
 #include "OpitResultListener.h"
 #include "ClientServiceContract.h"
-#include "../utils/Constants.h"
-#include "../utils/ClientUtils.h"
-#include "../utils/Debug.h"
-#include "../utils/JsonUtils.h"
 #include "../pojos/requests/ClientMessage.h"
 #include "../pojos/requests/HostMessage.h"
 #include "../pojos/requests/bank/ReceiptRequest.h"
@@ -21,19 +17,19 @@
 #include "../pojos/requests/bank/SimpleRequest.h"
 #include "../pojos/requests/bank/CurrencyRequest.h"
 #include "../pojos/requests/Request.h"
-#include "../pojos/requests/ecr/FreeTextInfo.h"
-#include "../pojos/requests/ecr/PaymentsInfo.h"
-#include "../pojos/requests/ecr/ProductsInfo.h"
+#include "../utils/ecr/FreeTextInfo.h"
+#include "../utils/ecr/PaymentsInfo.h"
+#include "../utils/ecr/ProductsInfo.h"
 #include "../pojos/requests/ecr/ReportRequest.h"
 #include "../pojos/requests/ecr/ScreenRequest.h"
-#include "../pojos/requests/ecr/SaleInfo.h"
+#include "../utils/ecr/SaleInfo.h"
 #include "../pojos/requests/ecr/SaleRequest.h"
-#include "../pojos/requests/ecr/SetCompanyRequest.h"
-#include "../pojos/requests/ecr/SetDateTimeRequest.h"
-#include "../pojos/requests/ecr/TotalAdjustments.h"
+#include "../pojos/requests/ecr/CompanyRequest.h"
+#include "../pojos/requests/ecr/DateTimeRequest.h"
+#include "../utils/ecr/TotalAdjustments.h"
 #include "../pojos/requests/ecr/VatRatesRequest.h"
 #include "../pojos/requests/ecr/CommandRequest.h"
-#include "../pojos/requests/ecr/CustomerInfo.h"
+#include "../utils/ecr/CustomerInfo.h"
 #include "../dll.h"
 
 #define DEFAULT_BUFLEN 512 * 50
@@ -101,7 +97,7 @@ public:
         const char* uniqueId);
 
     void ecrSetDateTimeRequest(const char* value, const char* uniqueId);
-    void ecrVatRatesRequest(const VatRate::Value vatId, const char* vatRate, const char* uniqueId);
+    void ecrVatRatesRequest(const VatRateType::Value vatId, const char* vatRate, const char* uniqueId);
 
     void destroy();
 };

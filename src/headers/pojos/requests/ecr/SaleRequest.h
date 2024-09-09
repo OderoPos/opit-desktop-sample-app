@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../ecr/CustomerInfo.h"
-#include "../ecr/FreeTextInfo.h"
-#include "../ecr/PaymentsInfo.h"
-#include "../ecr/ProductsInfo.h"
-#include "../ecr/SaleInfo.h"
-#include "../ecr/TotalAdjustments.h"
+#include "../../../utils/ecr/CustomerInfo.h"
+#include "../../../utils/ecr/FreeTextInfo.h"
+#include "../../../utils/ecr/PaymentsInfo.h"
+#include "../../../utils/ecr/ProductsInfo.h"
+#include "../../../utils/ecr/SaleInfo.h"
+#include "../../../utils/ecr/TotalAdjustments.h"
 #include "../Request.h"
 
 class DllExport SaleRequest : public Request {

@@ -1,6 +1,7 @@
 #pragma once
 
-#include "../Request.h"
+#include "../../utils/StringUtils.h"
+#include "../../dll.h"
 
 class DllExport SaleInfo {
 private:

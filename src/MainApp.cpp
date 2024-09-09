@@ -83,7 +83,6 @@ int __cdecl main(int argc, char** argv) {
 
 			resolveChooser(option);
 		}
-
 	} while (opit.isConnected());
 
 	std::cout << "Program has exit. Press ENTER to close the window." << std::endl;
@@ -184,8 +183,8 @@ void ecrSaleRequest() {
 
 	const int productSize = 2;
 	ProductsInfo* products = new ProductsInfo[productSize] {
-		ProductsInfo("Chocolate", "pcs", "10", VatRate::D, 0, 0, "0"),
-		ProductsInfo("Banana", "pcs", "2", VatRate::E, 0, 0, "0")
+		ProductsInfo("Chocolate", "pcs", "10", VatRateType::D, 0, 0, "0"),
+		ProductsInfo("Banana", "pcs", "2", VatRateType::E, 0, 0, "0")
 	};
 
 	const int paymentSize = 2;
@@ -202,8 +201,8 @@ void ecrSaleRequest() {
 	
 	const int discountSize = 2;
 	TotalAdjustments* discounts = new TotalAdjustments[discountSize] {
-		TotalAdjustments(VatRate::D, 0, 0, "1"),
-		TotalAdjustments(VatRate::A, 1, 2, "3")
+		TotalAdjustments(VatRateType::D, 0, 0, "1"),
+		TotalAdjustments(VatRateType::A, 1, 2, "3")
 	};
 
 	opit.ecrSaleRequest(
@@ -275,7 +274,7 @@ void ecrSetDateTime() {//YYMMddHHmmss
 }
 
 void ecrSetVatRates() {
-	opit.ecrVatRatesRequest(VatRate::D, "9.00", UNIQUE_ID);
+	opit.ecrVatRatesRequest(VatRateType::D, "9.00", UNIQUE_ID);
 }
 
 void ecrScreenRequest() {
