@@ -91,7 +91,7 @@ public:
         const char* uniqueId);
 
     void ecrSetDateTimeRequest(const char* value, const char* uniqueId);
-    void ecrVatRatesRequest(const VatRate::Value vatId, const char* vatRate, const char* uniqueId);
+    void ecrVatRatesRequest(const VatRateType::Value vatId, const char* vatRate, const char* uniqueId);
 
     void destroy();
 };

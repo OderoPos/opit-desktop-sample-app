@@ -1,11 +1,12 @@
 #pragma once
 
-#include "../Request.h"
-#include "../../../utils/VatRate.h"
+#include "../../utils/StringUtils.h"
+#include "../../utils/ecr/VatRateType.h"
+#include "../../dll.h"
 
 class DllExport TotalAdjustments {
 private:
-    VatRate vatId;
+    VatRateType vatId;
     int discountSign;
     int discountType;
     char* discountValue = NULL;
@@ -14,7 +15,7 @@ public:
     TotalAdjustments();
 
     explicit TotalAdjustments(
-        const VatRate::Value vatId_,
+        const VatRateType::Value vatId_,
         const int discountSign_,
         const int discountType_,
         const char* discountValue_
@@ -22,8 +23,8 @@ public:
 
     ~TotalAdjustments();
 
-    const VatRate getVatId();
-    void setVatId(const VatRate vatId_);
+    const VatRateType getVatId();
+    void setVatId(const VatRateType vatId_);
 
     const int getDiscountSign();
     void setDiscountSign(const int discountSign_);

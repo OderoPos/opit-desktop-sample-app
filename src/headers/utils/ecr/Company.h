@@ -1,8 +1,9 @@
 #pragma once
 
-#include "../Request.h"
+#include "../../utils/StringUtils.h"
+#include "../../dll.h"
 
-class DllExport SetCompanyRequest : public Request {
+class DllExport Company {
 private:
     char* name = NULL;
     char* address = NULL;
@@ -10,17 +11,16 @@ private:
     char* fiscalSeries = NULL;
 
 public:
-    SetCompanyRequest();
+    Company();
 
-    explicit SetCompanyRequest(
+    explicit Company(
         const char* name_,
         const char* address_,
         const char* cui_,
-        const char* fiscalSeries_,
-        const char* uniqueId_
+        const char* fiscalSeries_
     );
 
-    ~SetCompanyRequest();
+    ~Company();
 
     const char* getName();
     void setName(const char* name_);
@@ -34,8 +34,8 @@ public:
     const char* getFiscalSeries();
     void setFiscalSeries(const char* fiscalSeries_);
 
-    bool operator==(const SetCompanyRequest& rhs);
+    bool operator==(const Company& rhs);
     const char* toJson();
-    static SetCompanyRequest fromJson(const char* json);
+    static Company fromJson(const char* json);
     void toString();
 };

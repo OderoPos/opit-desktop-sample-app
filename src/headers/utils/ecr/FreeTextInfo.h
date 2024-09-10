@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../Request.h"
-#include "../../../utils/PagePosition.h"
+#include "../../utils/StringUtils.h"
+#include "../../utils/ecr/PagePosition.h"
+#include "../../dll.h"
 
 class DllExport FreeTextInfo {
 private:

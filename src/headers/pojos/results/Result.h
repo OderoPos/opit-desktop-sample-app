@@ -9,7 +9,7 @@
 
 class DllExport Result {
 protected:
-	char* uniqueId = NULL;
+	char* uniqueId;
 
 	const char* getUniqueId();
 	void setUniqueId(const char* uniqueId_);
