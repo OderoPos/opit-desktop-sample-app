@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../utils/CmdCode.h"
-#include "../utils/VatRate.h"
-#include "../utils/Report.h"
-#include "../utils/ReportSize.h"
-#include "../pojos/requests/ecr/FreeTextInfo.h"
-#include "../pojos/requests/ecr/PaymentsInfo.h"
-#include "../pojos/requests/ecr/ProductsInfo.h"
-#include "../pojos/requests/ecr/SaleInfo.h"
-#include "../pojos/requests/ecr/TotalAdjustments.h"
-#include "../pojos/requests/ecr/CustomerInfo.h"
+#include "../utils/ecr/CmdCode.h"
+#include "../utils/ecr/VatRateType.h"
+#include "../utils/ecr/Report.h"
+#include "../utils/ecr/ReportSize.h"
+#include "../utils/ecr/FreeTextInfo.h"
+#include "../utils/ecr/PaymentsInfo.h"
+#include "../utils/ecr/ProductsInfo.h"
+#include "../utils/ecr/SaleInfo.h"
+#include "../utils/ecr/TotalAdjustments.h"
+#include "../utils/ecr/CustomerInfo.h"
 #include "../dll.h"
 
 class DllExport
@@ -32,7 +32,7 @@ public:
     );
 
     virtual void ecrReportRequest(
-        const Report::Value type,
+        const ReportType::Value type,
         const ReportSize::Value size,
         const char* startDate,
         const char* stopDate,
@@ -65,5 +65,5 @@ public:
 
     virtual void ecrSetDateTimeRequest(const char* value, const char* uniqueId);
 
-    virtual void ecrVatRatesRequest(const VatRate::Value vatId, const char* vatRate, const char* uniqueId);
+    virtual void ecrVatRatesRequest(const VatRateType::Value vatId, const char* vatRate, const char* uniqueId);
 };

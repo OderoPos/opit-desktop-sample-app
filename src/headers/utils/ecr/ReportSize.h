@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../dll.h"
 #include <stdexcept>
 #include <cstring>
+#include "../../utils/StringUtils.h"
+#include "../../dll.h"
 
 class DllExport ReportSize {
 public:
     enum Value : size_t {
         Compressed,
-        Extended
+        Extended,
+        Null
     };
 
     ReportSize();

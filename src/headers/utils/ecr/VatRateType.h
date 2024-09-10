@@ -1,10 +1,11 @@
 #pragma once
 
-#include "../dll.h"
 #include <stdexcept>
 #include <cstring>
+#include "../../utils/ecr/VatRateType.h"
+#include "../../dll.h"
 
-class DllExport VatRate {
+class DllExport VatRateType {
 public:
     enum Value : size_t {
         A,
@@ -14,18 +15,19 @@ public:
         E,
         F,
         G,
-        H
+        H,
+        Null
     };
 
-    VatRate();
+    VatRateType();
 
-    explicit VatRate(
+    explicit VatRateType(
         const Value value_
     );
 
     const char* getName();
     static Value getEnum(const char* name);
-    bool operator==(const VatRate& rhs);
+    bool operator==(const VatRateType& rhs);
 
 private:
     Value value;

@@ -1,8 +1,9 @@
 #pragma once
 
-#include "../dll.h"
 #include <stdexcept>
 #include <cstring>
+#include "../../utils/StringUtils.h"
+#include "../../dll.h"
 
 class DllExport CmdCode{
 public:
@@ -14,7 +15,8 @@ public:
         GetStatus,
         GetDailyTotals,
         GetZreport,
-        GetSoftwareVersion
+        GetSoftwareVersion,
+        Null
     };
 
     CmdCode();
