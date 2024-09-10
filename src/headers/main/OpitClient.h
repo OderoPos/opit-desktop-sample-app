@@ -27,8 +27,7 @@
 #define ONE_SECOND 1 * 1000
 #define TWO_SECOND 2 * 1000
 
-class DllExport 
-OpitClient : ClientServiceContract {
+class OpitClient : ClientServiceContract {
 public:
     explicit OpitClient(
         OpitResultListener& resultListener_
