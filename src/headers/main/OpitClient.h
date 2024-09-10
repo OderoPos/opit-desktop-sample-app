@@ -38,7 +38,7 @@
 #define IP "192.168.1.1"
 #define PORT "5051"
 
-class DllExport OpitClient : ClientServiceContract {
+class OpitClient : ClientServiceContract {
 public:
     explicit OpitClient(
         OpitResultListener& resultListener_
