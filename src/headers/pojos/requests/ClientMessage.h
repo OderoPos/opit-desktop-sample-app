@@ -23,8 +23,10 @@ public:
 
     const char* getType();
     void setType(const char* type_);
+
     const char* getMessage();
     void setMessage(const char* message_);
+
     bool operator==(const ClientMessage& rhs);
     const char* toJson();
     static ClientMessage fromJson(const char* json);

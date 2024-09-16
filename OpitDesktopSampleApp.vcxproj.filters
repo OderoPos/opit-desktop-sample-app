@@ -116,7 +116,40 @@
     <ClInclude Include="src\headers\pojos\results\bank\BasicResult.h">
       <Filter>Header Files\pojos\results\bank</Filter>
     </ClInclude>
+    <ClInclude Include="src\headers\main\ClientServiceContract.h">
+      <Filter>Header Files\main</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\Sleep.hpp">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\StringUtils.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\requests\ecr\CommandRequest.h">
+      <Filter>Header Files\pojos\requests\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\requests\ecr\CompanyRequest.h">
+      <Filter>Header Files\pojos\requests\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\requests\ecr\DateTimeRequest.h">
+      <Filter>Header Files\pojos\requests\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\requests\ecr\ReportRequest.h">
+      <Filter>Header Files\pojos\requests\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\requests\ecr\SaleRequest.h">
+      <Filter>Header Files\pojos\requests\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\requests\ecr\ScreenRequest.h">
+      <Filter>Header Files\pojos\requests\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\requests\ecr\VatRatesRequest.h">
+      <Filter>Header Files\pojos\requests\ecr</Filter>
+    </ClInclude>
     <ClInclude Include="src\headers\pojos\results\ecr\DateTime.h">
+      <Filter>Header Files\pojos\results\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\pojos\results\ecr\EcrResult.h">
       <Filter>Header Files\pojos\results\ecr</Filter>
     </ClInclude>
     <ClInclude Include="src\headers\pojos\results\ecr\FailedCommand.h">
@@ -136,15 +169,6 @@
     </ClInclude>
     <ClInclude Include="src\headers\pojos\results\ecr\ScreenResult.h">
       <Filter>Header Files\pojos\results\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\main\ClientServiceContract.h">
-      <Filter>Header Files\main</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\utils\Sleep.hpp">
-      <Filter>Header Files\utils</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\utils\StringUtils.h">
-      <Filter>Header Files\utils</Filter>
     </ClInclude>
     <ClInclude Include="src\headers\utils\ecr\CmdCode.h">
       <Filter>Header Files\utils\ecr</Filter>
@@ -179,6 +203,9 @@
     <ClInclude Include="src\headers\utils\ecr\ReportType.h">
       <Filter>Header Files\utils\ecr</Filter>
     </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\Sale.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
     <ClInclude Include="src\headers\utils\ecr\SaleInfo.h">
       <Filter>Header Files\utils\ecr</Filter>
     </ClInclude>
@@ -191,26 +218,8 @@
     <ClInclude Include="src\headers\utils\ecr\VatRateType.h">
       <Filter>Header Files\utils\ecr</Filter>
     </ClInclude>
-    <ClInclude Include="src\headers\pojos\requests\ecr\CommandRequest.h">
-      <Filter>Header Files\pojos\requests\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\pojos\requests\ecr\CompanyRequest.h">
-      <Filter>Header Files\pojos\requests\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\pojos\requests\ecr\DateTimeRequest.h">
-      <Filter>Header Files\pojos\requests\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\pojos\requests\ecr\ReportRequest.h">
-      <Filter>Header Files\pojos\requests\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\pojos\requests\ecr\SaleRequest.h">
-      <Filter>Header Files\pojos\requests\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\pojos\requests\ecr\ScreenRequest.h">
-      <Filter>Header Files\pojos\requests\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\pojos\requests\ecr\VatRatesRequest.h">
-      <Filter>Header Files\pojos\requests\ecr</Filter>
+    <ClInclude Include="src\headers\utils\ecr\SaleCommand.h">
+      <Filter>Header Files\utils\ecr</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

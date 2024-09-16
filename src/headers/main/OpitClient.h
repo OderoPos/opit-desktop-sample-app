@@ -81,14 +81,24 @@ public:
     void ecrTechnicalReport(const char* uniqueId);
     void ecrZReport(const char* uniqueId);
     void ecrXReport(const char* uniqueId);
-    void ecrInitJournal(const char* uniqueId);
-    void ecrJournal(const char* startDate, const char* stopDate, const char* uniqueId);
-    void ecrXJournal(const char* uniqueId);
-    void ecrCustomerData(const char* uniqueId);
+    void ecrInitJournalReport(const char* uniqueId);
+    void ecrJournalReport(const char* startDate, const char* stopDate, const char* uniqueId);
+    void ecrXJournalReport(const char* uniqueId);
+    void ecrCustomerDataReport(const char* uniqueId);
     void ecrPeriodicReportByDate(const char* startDate, const char* stopDate, const char* uniqueId);
     void ecrPeriodicReportByZ(int* startZ, int* stopZ, const char* uniqueId);
-    void ecrScreenRequest(const char* value, const char* uniqueId);
 
+    void ecrFiscaliseCmd(const char* uniqueId);
+    void ecrInitElectronicJournalCmd(const char* uniqueId);
+    void ecrGetDateTimeCmd(const char* uniqueId);
+    void ecrGetVATRatesCmd(const char* uniqueId);
+    void ecrGetCompanyDataCmd(const char* uniqueId);
+    void ecrGetStatusCmd(const char* uniqueId);
+    void ecrGetDailyTotalsCmd(const char* uniqueId);
+    void ecrGetZreportCmd(const char* uniqueId);
+    void ecrGetSoftwareVersionCmd(const char* uniqueId);
+
+    void ecrScreenRequest(const char* value, const char* uniqueId);
     void ecrSetCompanyRequest(
         const char* name,
         const char* address,

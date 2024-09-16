@@ -1,27 +1,27 @@
 #pragma once
 
 #include "../Result.h"
-#include "FiscalResponse.h"
+#include "EcrResult.h"
 #include "FailedCommand.h"
 
 class DllExport FiscalResult : public Result {
 private:
-    FiscalResponse* fiscalResponse;
+    EcrResult* fiscalResponse;
     FailedCommand* failedCommand;
 
 public:
     FiscalResult();
 
     explicit FiscalResult(
-        FiscalResponse* fiscalResponse_,
+        EcrResult* fiscalResponse_,
         FailedCommand* failedCommand_,
         const char* uniqueId_
     );
 
     ~FiscalResult();
 
-    const FiscalResponse* getFiscalResponse();
-    void setFiscalResponse(FiscalResponse* fiscalResponse_);
+    const EcrResult* getFiscalResponse();
+    void setFiscalResponse(EcrResult* fiscalResponse_);
 
     const FailedCommand* getFailedCommand();
     void setFailedCommand(FailedCommand* failedCommand_);

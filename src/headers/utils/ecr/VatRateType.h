@@ -1,6 +1,5 @@
 #pragma once
 
-#include <stdexcept>
 #include <cstring>
 #include "../../utils/ecr/VatRateType.h"
 #include "../../dll.h"
@@ -16,7 +15,7 @@ public:
         F,
         G,
         H,
-        Null
+        null
     };
 
     VatRateType();

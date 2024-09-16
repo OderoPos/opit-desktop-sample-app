@@ -1,6 +1,5 @@
 #pragma once
 
-#include <stdexcept>
 #include <cstring>
 #include "../../utils/StringUtils.h"
 #include "../../dll.h"

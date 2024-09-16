@@ -9,6 +9,7 @@ private:
     char* name = NULL;
     char* um = NULL;
     char* quantity = NULL;
+    char* price = NULL;
     VatRateType vatId;
     int discountSign;
     int discountType;
@@ -21,6 +22,7 @@ public:
         const char* name_,
         const char* um_,
         const char* quantity_,
+        const char* price_,
         const VatRateType::Value vatId_,
         const int discountSign_,
         const int discountType_,
@@ -37,6 +39,9 @@ public:
 
     const char* getQuantity();
     void setQuantity(const char* quantity_);
+
+    const char* getPrice();
+    void setPrice(const char* price_);
 
     const VatRateType getVatId();
     void setVatId(const VatRateType vatId_);

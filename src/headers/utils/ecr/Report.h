@@ -19,8 +19,8 @@ public:
     Report();
 
     explicit Report(
-        ReportType::Value* type_,
-        ReportSize::Value * size_,
+        ReportType::Value type_,
+        ReportSize::Value size_,
         const char* startDate_,
         const char* stopDate_,
         int* startZ_,

@@ -52,6 +52,7 @@
     <ClInclude Include="src\headers\pojos\results\bank\SimpleXResult.h" />
     <ClInclude Include="src\headers\pojos\results\bank\VoidResult.h" />
     <ClInclude Include="src\headers\pojos\results\ecr\DateTime.h" />
+    <ClInclude Include="src\headers\pojos\results\ecr\EcrResult.h" />
     <ClInclude Include="src\headers\pojos\results\ecr\FailedCommand.h" />
     <ClInclude Include="src\headers\pojos\results\ecr\FiscalResponse.h" />
     <ClInclude Include="src\headers\pojos\results\ecr\FiscalResponseValue.h" />
@@ -70,6 +71,8 @@
     <ClInclude Include="src\headers\utils\ecr\Report.h" />
     <ClInclude Include="src\headers\utils\ecr\ReportSize.h" />
     <ClInclude Include="src\headers\utils\ecr\ReportType.h" />
+    <ClInclude Include="src\headers\utils\ecr\Sale.h" />
+    <ClInclude Include="src\headers\utils\ecr\SaleCommand.h" />
     <ClInclude Include="src\headers\utils\ecr\SaleInfo.h" />
     <ClInclude Include="src\headers\utils\ecr\TotalAdjustments.h" />
     <ClInclude Include="src\headers\utils\ecr\VatRates.h" />
