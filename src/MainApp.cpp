@@ -306,7 +306,15 @@ void ecrSetDateTime() {//YYMMddHHmmss
 }
 
 void ecrSetVatRates() {
-	opit.ecrVatRatesRequest(VatRateType::D, "9.00", UNIQUE_ID);
+	const int size = 4;
+	VatRates* vatRates = new VatRates[size]{
+		VatRates(VatRateType::A, "3.00"),
+		VatRates(VatRateType::B, "5.00"),
+		VatRates(VatRateType::C, "7.00"),
+		VatRates(VatRateType::D, "9.00")
+	};
+
+	opit.ecrVatRatesRequest(vatRates, size, UNIQUE_ID);
 }
 
 void ecrFiscaliseCmd() {

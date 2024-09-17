@@ -23,8 +23,7 @@ public:
     void onSimpleXReportResult(Result& result);
     void onLastSettlementResult(Result& result);
     void onSettlementResult(Result& result);
-    void onFiscalCommandResult(Result& result);
-    void onScreenCommandResult(Result& result);
+    void onEcrCommandResult(Result& result);
     void onPairingDone(bool isPaired);
     void onError(const char* msg);
     void onDisconnected();
