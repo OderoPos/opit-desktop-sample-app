@@ -2,7 +2,7 @@
 
 #include "../Result.h"
 
-class DllExport BasicResult : public Result {
+class BasicResult : public Result {
 private:
     char* result;
 

@@ -1,16 +1,15 @@
 #pragma once
 
 #include <cstring>
-#include "../../utils/StringUtils.h"
-#include "../../dll.h"
 
-class DllExport CmdCode{
+class CmdCode {
 public:
     enum Value : size_t {
         Fiscalise,
         JournalInit,
         GetDateTime,
         GetVatRates,
+        GetCompanyData,
         GetStatus,
         GetDailyTotals,
         GetZreport,

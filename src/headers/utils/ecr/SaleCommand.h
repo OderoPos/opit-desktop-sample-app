@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../../utils/ecr/Sale.h"
+#include "Sale.h"
 
-class DllExport SaleCommand {
+class SaleCommand {
 private:
-    Sale* sale = NULL;
+    Sale* sale = nullptr;
 
 public:
     SaleCommand();

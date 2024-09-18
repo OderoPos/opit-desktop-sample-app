@@ -1,19 +1,17 @@
 #pragma once
 
-#include "../../utils/StringUtils.h"
 #include "../../utils/ecr/VatRateType.h"
-#include "../../dll.h"
 
-class DllExport ProductsInfo {
+class ProductsInfo {
 private:
-    char* name = NULL;
-    char* um = NULL;
-    char* quantity = NULL;
-    char* price = NULL;
+    char* name = nullptr;
+    char* um = nullptr;
+    char* quantity = nullptr;
+    char* price = nullptr;
     VatRateType vatId;
-    int discountSign;
-    int discountType;
-    char* discountValue = NULL;
+    int discountSign = 0;
+    int discountType = 0;
+    char* discountValue = nullptr;
 
 public:
     ProductsInfo();

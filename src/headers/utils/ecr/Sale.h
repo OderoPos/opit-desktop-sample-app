@@ -9,21 +9,19 @@
 #include "ProductsInfo.h"
 #include "SaleInfo.h"
 #include "TotalAdjustments.h"
-#include "../../utils/StringUtils.h"
-#include "../../dll.h"
 
-class DllExport Sale {
+class Sale {
 private:
-    SaleInfo* saleInfo = NULL;
-    CustomerInfo* customerInfo = NULL;
-    ProductsInfo* products = NULL;
-    PaymentsInfo* payments = NULL;
-    FreeTextInfo* freeTexts = NULL;
-    TotalAdjustments* discounts = NULL;
-    int productSize;
-    int paymentSize;
-    int freeTextSize;
-    int discountSize;
+    SaleInfo* saleInfo = nullptr;
+    CustomerInfo* customerInfo = nullptr;
+    ProductsInfo* products = nullptr;
+    PaymentsInfo* payments = nullptr;
+    FreeTextInfo* freeTexts = nullptr;
+    TotalAdjustments* discounts = nullptr;
+    int productSize = 0;
+    int paymentSize = 0;
+    int freeTextSize = 0;
+    int discountSize = 0;
 
 public:
     Sale();

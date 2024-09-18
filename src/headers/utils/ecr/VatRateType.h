@@ -1,10 +1,8 @@
 #pragma once
 
-#include <cstring>
 #include "../../utils/ecr/VatRateType.h"
-#include "../../dll.h"
 
-class DllExport VatRateType {
+class VatRateType {
 public:
     enum Value : size_t {
         A,
@@ -15,7 +13,7 @@ public:
         F,
         G,
         H,
-        null
+        Null
     };
 
     VatRateType();

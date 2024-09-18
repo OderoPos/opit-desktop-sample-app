@@ -1,24 +1,24 @@
 #pragma once
 
 #include "../Request.h"
-#include "../../../utils/ecr/Report.h"
+#include "../../../utils/ecr/ReportCommand.h"
 
-class DllExport ReportRequest : public Request {
+class ReportRequest : public Request {
 private:
-    Report* report = NULL;
+    ReportCommand* command = nullptr;
 
 public:
     ReportRequest();
 
     explicit ReportRequest(
-        Report* report_,
+        ReportCommand* command_,
         const char* uniqueId_
     );
 
     ~ReportRequest();
 
-    const Report* getReport();
-    void setReport(Report* report_);
+    const ReportCommand* getReportCommand();
+    void setReportCommand(ReportCommand* command_);
 
     bool operator==(const ReportRequest& rhs);
     const char* toJson();

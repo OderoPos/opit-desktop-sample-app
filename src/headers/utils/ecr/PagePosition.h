@@ -1,10 +1,6 @@
 #pragma once
 
-#include <cstring>
-#include "../../utils/StringUtils.h"
-#include "../../dll.h"
-
-class DllExport PagePosition {
+class PagePosition {
 public:
     enum Value : size_t {
         Head,

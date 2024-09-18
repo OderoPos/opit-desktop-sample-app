@@ -1,19 +1,17 @@
 #pragma once
 
-#include "../../utils/StringUtils.h"
 #include "../../utils/ecr/ReportType.h"
 #include "../../utils/ecr/ReportSize.h"
-#include "../../dll.h"
 
-class DllExport Report {
+class Report {
 private:
-    ReportType* type = NULL;
-    ReportSize* size = NULL;
-    char* startDate = NULL;
-    char* stopDate = NULL;
-    int* startZ = NULL;
-    int* stopZ = NULL;
-    char* media = NULL;
+    ReportType type;
+    ReportSize* size = nullptr;
+    char* startDate = nullptr;
+    char* stopDate = nullptr;
+    int* startZ = nullptr;
+    int* stopZ = nullptr;
+    char* media = nullptr;
 
 public:
     Report();
@@ -30,8 +28,8 @@ public:
 
     ~Report();
 
-    const ReportType* getType();
-    void setType(ReportType* type_);
+    const ReportType getType();
+    void setType(ReportType type_);
 
     const ReportSize* getSize();
     void setSize(ReportSize* size_);

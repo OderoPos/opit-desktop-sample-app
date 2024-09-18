@@ -2,7 +2,7 @@
 
 #include "../Result.h"
 
-class DllExport VoidResult : public Result {
+class VoidResult : public Result {
 private:
     char* result;
     char* receiptNo;

@@ -8,6 +8,4 @@
 	#include <unistd.h>
 #endif
 
-#include "../dll.h"
-
-DllExport void sleep(long delay);
+void sleep(long delay);

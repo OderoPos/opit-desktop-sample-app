@@ -2,7 +2,7 @@
 
 #include "../Result.h"
 
-class DllExport PaymentResult : public Result {
+class PaymentResult : public Result {
 private:
     double amount;
     char* currency;

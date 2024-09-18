@@ -2,9 +2,9 @@
 
 #include "../Result.h"
 
-class DllExport EcrResult : public Result {
+class EcrResult : public Result {
 private:
-    char* result;
+    char* result = nullptr;
 
 public:
     EcrResult();

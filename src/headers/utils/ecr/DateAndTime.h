@@ -1,11 +1,8 @@
 #pragma once
 
-#include "../../utils/StringUtils.h"
-#include "../../dll.h"
-
-class DllExport DateAndTime {
+class DateAndTime {
 private:
-    char* value = NULL;
+    char* value = nullptr;
 
 public:
     DateAndTime();

@@ -30,7 +30,6 @@
 #include "../pojos/requests/ecr/VatRatesRequest.h"
 #include "../pojos/requests/ecr/CommandRequest.h"
 #include "../utils/ecr/CustomerInfo.h"
-#include "../dll.h"
 
 #define DEFAULT_BUFLEN 512 * 50
 #define ONE_SECOND 1 * 1000

@@ -1,10 +1,6 @@
 #pragma once
 
-#include <cstring>
-#include "../../utils/StringUtils.h"
-#include "../../dll.h"
-
-class DllExport ReportType {
+class ReportType {
 public:
     enum Value : size_t {
         Z,

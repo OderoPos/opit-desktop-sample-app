@@ -3,10 +3,8 @@
 #include <iostream>
 #include <string>
 #include <cstring>
-#include "../../utils/StringUtils.h"
-#include "../../dll.h"
 
-class DllExport ClientMessage {
+class ClientMessage {
 private:
     char* type;
     char* message;

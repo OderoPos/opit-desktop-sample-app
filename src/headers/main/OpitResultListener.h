@@ -8,12 +8,9 @@
 #include "../pojos/results/bank/SimpleXResult.h"
 #include "../pojos/results/bank/LastSettlementResult.h"
 #include "../pojos/results/bank/SettlementResult.h"
-#include "../pojos/results/ecr/ScreenResult.h"
-#include "../pojos/results/ecr/FiscalResult.h"
-#include "../dll.h"
+#include "../pojos/results/ecr/EcrResult.h"
 
-class DllExport 
-OpitResultListener {
+class OpitResultListener {
 public:
     void onPaymentResult(Result& result);
     void onVoidResult(Result& result);

@@ -3,9 +3,9 @@
 #include "../../../utils/ecr/SaleCommand.h"
 #include "../Request.h"
 
-class DllExport SaleRequest : public Request {
+class SaleRequest : public Request {
 private:
-    SaleCommand* command = NULL;
+    SaleCommand* command = nullptr;
 
 public:
     SaleRequest();

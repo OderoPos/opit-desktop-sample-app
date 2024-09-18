@@ -1,14 +1,11 @@
 #pragma once
 
-#include "../../utils/StringUtils.h"
-#include "../../dll.h"
-
-class DllExport Company {
+class Company {
 private:
-    char* name = NULL;
-    char* address = NULL;
-    char* cui = NULL;
-    char* fiscalSeries = NULL;
+    char* name = nullptr;
+    char* address = nullptr;
+    char* cui = nullptr;
+    char* fiscalSeries = nullptr;
 
 public:
     Company();

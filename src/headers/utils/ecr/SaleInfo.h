@@ -1,12 +1,9 @@
 #pragma once
 
-#include "../../utils/StringUtils.h"
-#include "../../dll.h"
-
-class DllExport SaleInfo {
+class SaleInfo {
 private:
     int posNo = 0;
-    char* cashier = NULL;
+    char* cashier = nullptr;
 
 public:
     SaleInfo();
