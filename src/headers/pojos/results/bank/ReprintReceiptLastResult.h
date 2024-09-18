@@ -2,7 +2,7 @@
 
 #include "../Result.h"
 
-class DllExport ReprintReceiptLastResult : public Result {
+class ReprintReceiptLastResult : public Result {
 private:
     char* result;
 

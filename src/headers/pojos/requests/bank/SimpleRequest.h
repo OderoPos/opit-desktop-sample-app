@@ -2,7 +2,7 @@
 
 #include "../Request.h"
 
-class DllExport SimpleRequest : public Request {
+class SimpleRequest : public Request {
 
 public:
     SimpleRequest();

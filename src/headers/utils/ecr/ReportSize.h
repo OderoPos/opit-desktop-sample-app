@@ -1,11 +1,6 @@
 #pragma once
 
-#include <stdexcept>
-#include <cstring>
-#include "../../utils/StringUtils.h"
-#include "../../dll.h"
-
-class DllExport ReportSize {
+class ReportSize {
 public:
     enum Value : size_t {
         Compressed,
@@ -20,10 +15,10 @@ public:
     );
 
     const char* getName();
-    Value* getValue();
+    Value getValue();
     static Value getEnum(const char* name);
     bool operator==(const ReportSize& rhs);
 
 private:
-    Value* value;
+    Value value;
 };

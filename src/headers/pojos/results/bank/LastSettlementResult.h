@@ -2,7 +2,7 @@
 
 #include "../Result.h"
 
-class DllExport LastSettlementResult : public Result {
+class LastSettlementResult : public Result {
 private:
     char* result;
     char* currency;

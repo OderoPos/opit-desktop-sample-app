@@ -2,9 +2,9 @@
 
 #include "../Request.h"
 
-class DllExport ScreenRequest : public Request {
+class ScreenRequest : public Request {
 private:
-    char* value = NULL;
+    char* value = nullptr;
 
 public:
     ScreenRequest();

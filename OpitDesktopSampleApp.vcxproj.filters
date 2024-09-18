@@ -40,15 +40,20 @@
     <Filter Include="Header Files\pojos\results\ecr">
       <UniqueIdentifier>{f86695fb-786f-4341-8a1a-91f27d6a9b5a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\utils\ecr">
+      <UniqueIdentifier>{7e487c2e-2837-4311-8d61-38e99692be8e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\MainApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ResultListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\headers\main\ClientServiceContract.h">
-      <Filter>Header Files\main</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\main\ClientServiceExtendedContract.h">
-      <Filter>Header Files\main</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\main\InternalOpitResultListener.h">
       <Filter>Header Files\main</Filter>
     </ClInclude>
     <ClInclude Include="src\headers\main\OpitClient.h">
@@ -84,37 +89,19 @@
     <ClInclude Include="src\headers\pojos\requests\ecr\CommandRequest.h">
       <Filter>Header Files\pojos\requests\ecr</Filter>
     </ClInclude>
-    <ClInclude Include="src\headers\pojos\requests\ecr\CustomerInfo.h">
+    <ClInclude Include="src\headers\pojos\requests\ecr\CompanyRequest.h">
       <Filter>Header Files\pojos\requests\ecr</Filter>
     </ClInclude>
-    <ClInclude Include="src\headers\pojos\requests\ecr\FreeTextInfo.h">
-      <Filter>Header Files\pojos\requests\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\pojos\requests\ecr\PaymentsInfo.h">
-      <Filter>Header Files\pojos\requests\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\pojos\requests\ecr\ProductsInfo.h">
+    <ClInclude Include="src\headers\pojos\requests\ecr\DateTimeRequest.h">
       <Filter>Header Files\pojos\requests\ecr</Filter>
     </ClInclude>
     <ClInclude Include="src\headers\pojos\requests\ecr\ReportRequest.h">
-      <Filter>Header Files\pojos\requests\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\pojos\requests\ecr\SaleInfo.h">
       <Filter>Header Files\pojos\requests\ecr</Filter>
     </ClInclude>
     <ClInclude Include="src\headers\pojos\requests\ecr\SaleRequest.h">
       <Filter>Header Files\pojos\requests\ecr</Filter>
     </ClInclude>
     <ClInclude Include="src\headers\pojos\requests\ecr\ScreenRequest.h">
-      <Filter>Header Files\pojos\requests\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\pojos\requests\ecr\SetCompanyRequest.h">
-      <Filter>Header Files\pojos\requests\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\pojos\requests\ecr\SetDateTimeRequest.h">
-      <Filter>Header Files\pojos\requests\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\pojos\requests\ecr\TotalAdjustments.h">
       <Filter>Header Files\pojos\requests\ecr</Filter>
     </ClInclude>
     <ClInclude Include="src\headers\pojos\requests\ecr\VatRatesRequest.h">
@@ -150,70 +137,80 @@
     <ClInclude Include="src\headers\pojos\results\bank\VoidResult.h">
       <Filter>Header Files\pojos\results\bank</Filter>
     </ClInclude>
-    <ClInclude Include="src\headers\pojos\results\ecr\DateTime.h">
+    <ClInclude Include="src\headers\pojos\results\ecr\EcrResult.h">
       <Filter>Header Files\pojos\results\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\pojos\results\ecr\FailedCommand.h">
-      <Filter>Header Files\pojos\results\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\pojos\results\ecr\FiscalResponse.h">
-      <Filter>Header Files\pojos\results\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\pojos\results\ecr\FiscalResponseValue.h">
-      <Filter>Header Files\pojos\results\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\pojos\results\ecr\FiscalResult.h">
-      <Filter>Header Files\pojos\results\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\pojos\results\ecr\ScreenResponseValue.h">
-      <Filter>Header Files\pojos\results\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\pojos\results\ecr\ScreenResult.h">
-      <Filter>Header Files\pojos\results\ecr</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\utils\ClientUtils.h">
-      <Filter>Header Files\utils</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\utils\CmdCode.h">
-      <Filter>Header Files\utils</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\utils\Constants.h">
-      <Filter>Header Files\utils</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\utils\Debug.h">
-      <Filter>Header Files\utils</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\utils\JsonUtils.h">
-      <Filter>Header Files\utils</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\utils\PagePosition.h">
-      <Filter>Header Files\utils</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\utils\Report.h">
-      <Filter>Header Files\utils</Filter>
-    </ClInclude>
-    <ClInclude Include="src\headers\utils\ReportSize.h">
-      <Filter>Header Files\utils</Filter>
     </ClInclude>
     <ClInclude Include="src\headers\utils\Sleep.hpp">
       <Filter>Header Files\utils</Filter>
     </ClInclude>
-    <ClInclude Include="src\headers\utils\StringUtils.h">
-      <Filter>Header Files\utils</Filter>
+    <ClInclude Include="src\headers\utils\ecr\CmdCode.h">
+      <Filter>Header Files\utils\ecr</Filter>
     </ClInclude>
-    <ClInclude Include="src\headers\utils\VatRate.h">
-      <Filter>Header Files\utils</Filter>
+    <ClInclude Include="src\headers\utils\ecr\CodeCommand.h">
+      <Filter>Header Files\utils\ecr</Filter>
     </ClInclude>
-    <ClInclude Include="src\headers\dll.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\headers\utils\ecr\Company.h">
+      <Filter>Header Files\utils\ecr</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\MainApp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ResultListener.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClInclude Include="src\headers\utils\ecr\CompanyCommand.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\CustomerInfo.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\DateAndTime.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\DateTimeCommand.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\FreeTextInfo.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\GetCommand.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\PagePosition.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\PaymentsInfo.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\ProductsInfo.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\Report.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\ReportCommand.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\ReportSize.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\ReportType.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\Sale.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\SaleCommand.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\SaleInfo.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\TotalAdjustments.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\VatRates.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\VatRatesCommand.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\headers\utils\ecr\VatRateType.h">
+      <Filter>Header Files\utils\ecr</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

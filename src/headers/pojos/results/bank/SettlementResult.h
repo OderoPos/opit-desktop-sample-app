@@ -2,7 +2,7 @@
 
 #include "../Result.h"
 
-class DllExport SettlementResult : public Result {
+class SettlementResult : public Result {
 private:
     char* result;
 

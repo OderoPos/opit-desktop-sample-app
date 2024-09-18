@@ -1,15 +1,13 @@
 #pragma once
 
-#include "../../utils/StringUtils.h"
 #include "../../utils/ecr/VatRateType.h"
-#include "../../dll.h"
 
-class DllExport TotalAdjustments {
+class TotalAdjustments {
 private:
     VatRateType vatId;
-    int discountSign;
-    int discountType;
-    char* discountValue = NULL;
+    int discountSign = 0;
+    int discountType = 0;
+    char* discountValue = nullptr;
 
 public:
     TotalAdjustments();
