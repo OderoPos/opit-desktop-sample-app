@@ -261,9 +261,9 @@ void ecrInitJournal() {
 	opit.ecrInitJournalReport(UNIQUE_ID);
 }
 
-void ecrJournal() {//YYMMddHHmmss
-	const char* startDate = "240801010101";
-	const char* stopDate = "240801010201";
+void ecrJournal() {//ssmmHHddMMYY
+	const char* startDate = "133200160924";
+	const char* stopDate = "133200160924";
 
 	opit.ecrJournalReport(startDate, stopDate, UNIQUE_ID);
 }
@@ -276,9 +276,9 @@ void ecrCustomerData() {
 	opit.ecrCustomerDataReport(UNIQUE_ID);
 }
 
-void ecrPeriodicReportByDate() {//YYMMddHHmmss
-	const char* startDate = "240801010101";
-	const char* stopDate = "240801010201";
+void ecrPeriodicReportByDate() {//ssmmHHddMMYY
+	const char* startDate = "133200160924";
+	const char* stopDate = "133200160924";
 
 	opit.ecrPeriodicReportByDate(startDate, stopDate, UNIQUE_ID);
 }
@@ -299,8 +299,8 @@ void ecrSetCompany() {
 	opit.ecrSetCompanyRequest(name, address, cui, fiscalSeries, UNIQUE_ID);
 }
 
-void ecrSetDateTime() {//YYMMddHHmmss
-	const char* value = "240901010101";
+void ecrSetDateTime() {//ssmmHHddMMYY
+	const char* value = "133200160924";
 
 	opit.ecrSetDateTimeRequest(value, UNIQUE_ID);
 }
@@ -308,10 +308,10 @@ void ecrSetDateTime() {//YYMMddHHmmss
 void ecrSetVatRates() {
 	const int size = 4;
 	VatRates* vatRates = new VatRates[size]{
-		VatRates(VatRateType::A, "3.00"),
-		VatRates(VatRateType::B, "5.00"),
-		VatRates(VatRateType::C, "7.00"),
-		VatRates(VatRateType::D, "9.00")
+		VatRates(VatRateType::A, "3"),
+		VatRates(VatRateType::B, "5"),
+		VatRates(VatRateType::C, "7"),
+		VatRates(VatRateType::D, "9")
 	};
 
 	opit.ecrVatRatesRequest(vatRates, size, UNIQUE_ID);
