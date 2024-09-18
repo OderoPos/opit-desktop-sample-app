@@ -7,7 +7,7 @@
 
 class Result {
 protected:
-	char* uniqueId = NULL;
+	char* uniqueId = nullptr;
 
 	const char* getUniqueId();
 	void setUniqueId(const char* uniqueId_);

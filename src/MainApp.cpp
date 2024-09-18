@@ -210,12 +210,12 @@ void ecrCommandRequest() {
 
 void ecrSaleRequest() {
 	SaleInfo* saleInfo = new SaleInfo(1, "operator");
-	CustomerInfo* customerInfo = NULL;// new CustomerInfo("RO1592512");
+	CustomerInfo* customerInfo = nullptr;// new CustomerInfo("RO1592512");
 
 	const int productSize = 1;
 	ProductsInfo* products = new ProductsInfo[productSize] {
-		ProductsInfo("Chocolate", "buc", "10", "5,70", VatRateType::B, NULL, NULL, NULL)
-		//, ProductsInfo("Banana", "pcs", "2", "2,70", VatRateType::B, NULL, NULL, NULL)
+		ProductsInfo("Chocolate", "buc", "10", "5,70", VatRateType::B, 0, 0, nullptr)
+		//, ProductsInfo("Banana", "pcs", "2", "2,70", VatRateType::B, 0, 0, nullptr)
 	};
 
 	const int paymentSize = 1;
@@ -231,7 +231,7 @@ void ecrSaleRequest() {
 	};
 	
 	const int discountSize = 0;
-	TotalAdjustments* discounts = NULL;
+	TotalAdjustments* discounts = nullptr;
 	//	new TotalAdjustments[discountSize] {
 	//	TotalAdjustments(VatRateType::D, 0, 0, "1"),
 	//	TotalAdjustments(VatRateType::A, 1, 2, "3")

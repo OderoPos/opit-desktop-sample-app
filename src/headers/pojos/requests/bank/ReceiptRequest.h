@@ -4,7 +4,7 @@
 
 class ReceiptRequest : public Request {
 private:
-    char* receiptNo = NULL;
+    char* receiptNo = nullptr;
 
 public:
     ReceiptRequest();
