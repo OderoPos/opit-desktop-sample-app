@@ -1,14 +1,11 @@
 #pragma once
 
 #include "../../utils/ecr/VatRateType.h"
-#include "../../utils/ecr/VatRateType.h"
-#include "../../utils/StringUtils.h"
-#include "../../dll.h"
 
-class DllExport VatRates {
+class VatRates {
 private:
     VatRateType vatId;
-    char* vatRate = NULL;
+    char* vatRate = nullptr;
 
 public:
     VatRates();

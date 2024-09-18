@@ -1,24 +1,24 @@
 #pragma once
 
 #include "../Request.h"
-#include "../../../utils/ecr/Company.h"
+#include "../../../utils/ecr/CompanyCommand.h"
 
-class DllExport CompanyRequest : public Request {
+class CompanyRequest : public Request {
 private:
-    Company* company = NULL;
+    CompanyCommand* command = nullptr;
 
 public:
     CompanyRequest();
 
     explicit CompanyRequest(
-        Company* company_,
+        CompanyCommand* command_,
         const char* uniqueId_
     );
 
     ~CompanyRequest();
 
-    const Company* getCompany();
-    void setCompany(Company* company_);
+    const CompanyCommand* getCompanyCommand();
+    void setCompanyCommand(CompanyCommand* command_);
 
     bool operator==(const CompanyRequest& rhs);
     const char* toJson();

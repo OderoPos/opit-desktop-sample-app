@@ -1,24 +1,24 @@
 #pragma once
 
 #include "../Request.h"
-#include "../../../utils/ecr/DateAndTime.h"
+#include "../../../utils/ecr/DateTimeCommand.h"
 
-class DllExport DateTimeRequest : public Request {
+class DateTimeRequest : public Request {
 private:
-    DateAndTime* dateTime = NULL;
+    DateTimeCommand* command = nullptr;
 
 public:
     DateTimeRequest();
 
     explicit DateTimeRequest(
-        DateAndTime* dateTime_,
+        DateTimeCommand* command_,
         const char* uniqueId_
     );
 
     ~DateTimeRequest();
 
-    const DateAndTime* getDateTime();
-    void setDateTime(DateAndTime* dateTime_);
+    const DateTimeCommand* getDateTimeCommand();
+    void setDateTimeCommand(DateTimeCommand* command_);
 
     bool operator==(const DateTimeRequest& rhs);
     const char* toJson();

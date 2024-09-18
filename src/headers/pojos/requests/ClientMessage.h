@@ -3,10 +3,8 @@
 #include <iostream>
 #include <string>
 #include <cstring>
-#include "../../utils/StringUtils.h"
-#include "../../dll.h"
 
-class DllExport ClientMessage {
+class ClientMessage {
 private:
     char* type;
     char* message;
@@ -23,8 +21,10 @@ public:
 
     const char* getType();
     void setType(const char* type_);
+
     const char* getMessage();
     void setMessage(const char* message_);
+
     bool operator==(const ClientMessage& rhs);
     const char* toJson();
     static ClientMessage fromJson(const char* json);

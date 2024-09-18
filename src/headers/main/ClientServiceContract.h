@@ -10,10 +10,8 @@
 #include "../utils/ecr/SaleInfo.h"
 #include "../utils/ecr/TotalAdjustments.h"
 #include "../utils/ecr/CustomerInfo.h"
-#include "../dll.h"
 
-class DllExport
-ClientServiceContract {
+class ClientServiceContract {
 public:
     virtual void sendPaymentRequest(double amount, const char* currency, const char* uniqueId);
     virtual void printSettlement(const char* uniqueId);

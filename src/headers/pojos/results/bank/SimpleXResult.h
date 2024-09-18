@@ -2,7 +2,7 @@
 
 #include "../Result.h"
 
-class DllExport SimpleXResult : public Result {
+class SimpleXResult : public Result {
 private:
     char* result;
     char* currency;

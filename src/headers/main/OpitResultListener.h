@@ -8,12 +8,9 @@
 #include "../pojos/results/bank/SimpleXResult.h"
 #include "../pojos/results/bank/LastSettlementResult.h"
 #include "../pojos/results/bank/SettlementResult.h"
-#include "../pojos/results/ecr/ScreenResult.h"
-#include "../pojos/results/ecr/FiscalResult.h"
-#include "../dll.h"
+#include "../pojos/results/ecr/EcrResult.h"
 
-class DllExport 
-OpitResultListener {
+class OpitResultListener {
 public:
     void onPaymentResult(Result& result);
     void onVoidResult(Result& result);
@@ -23,8 +20,7 @@ public:
     void onSimpleXReportResult(Result& result);
     void onLastSettlementResult(Result& result);
     void onSettlementResult(Result& result);
-    void onFiscalCommandResult(Result& result);
-    void onScreenCommandResult(Result& result);
+    void onEcrCommandResult(Result& result);
     void onPairingDone(bool isPaired);
     void onError(const char* msg);
     void onDisconnected();

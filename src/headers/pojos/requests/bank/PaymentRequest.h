@@ -2,11 +2,11 @@
 
 #include "../Request.h"
 
-class DllExport PaymentRequest : Request {
+class PaymentRequest : Request {
 private:
     double amount = 0;
-    char* currency = NULL;
-    char* currencyCode = NULL;
+    char* currency = nullptr;
+    char* currencyCode = nullptr;
 
 public:
     PaymentRequest();

@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\headers\dll.h" />
     <ClInclude Include="src\headers\main\ClientServiceContract.h" />
     <ClInclude Include="src\headers\main\OpitClient.h" />
     <ClInclude Include="src\headers\main\OpitResultListener.h" />
@@ -47,32 +46,33 @@
     <ClInclude Include="src\headers\pojos\results\bank\SettlementResult.h" />
     <ClInclude Include="src\headers\pojos\results\bank\SimpleXResult.h" />
     <ClInclude Include="src\headers\pojos\results\bank\VoidResult.h" />
-    <ClInclude Include="src\headers\pojos\results\ecr\DateTime.h" />
-    <ClInclude Include="src\headers\pojos\results\ecr\FailedCommand.h" />
-    <ClInclude Include="src\headers\pojos\results\ecr\FiscalResponse.h" />
-    <ClInclude Include="src\headers\pojos\results\ecr\FiscalResponseValue.h" />
-    <ClInclude Include="src\headers\pojos\results\ecr\FiscalResult.h" />
-    <ClInclude Include="src\headers\pojos\results\ecr\ScreenResponseValue.h" />
-    <ClInclude Include="src\headers\pojos\results\ecr\ScreenResult.h" />
+    <ClInclude Include="src\headers\pojos\results\ecr\EcrResult.h" />
     <ClInclude Include="src\headers\pojos\results\Result.h" />
     <ClInclude Include="src\headers\thread\CppThread.hpp" />
     <ClInclude Include="src\headers\utils\ecr\CmdCode.h" />
+    <ClInclude Include="src\headers\utils\ecr\CodeCommand.h" />
     <ClInclude Include="src\headers\utils\ecr\Company.h" />
+    <ClInclude Include="src\headers\utils\ecr\CompanyCommand.h" />
     <ClInclude Include="src\headers\utils\ecr\CustomerInfo.h" />
     <ClInclude Include="src\headers\utils\ecr\DateAndTime.h" />
+    <ClInclude Include="src\headers\utils\ecr\DateTimeCommand.h" />
     <ClInclude Include="src\headers\utils\ecr\FreeTextInfo.h" />
+    <ClInclude Include="src\headers\utils\ecr\GetCommand.h" />
     <ClInclude Include="src\headers\utils\ecr\PagePosition.h" />
     <ClInclude Include="src\headers\utils\ecr\PaymentsInfo.h" />
     <ClInclude Include="src\headers\utils\ecr\ProductsInfo.h" />
     <ClInclude Include="src\headers\utils\ecr\Report.h" />
+    <ClInclude Include="src\headers\utils\ecr\ReportCommand.h" />
     <ClInclude Include="src\headers\utils\ecr\ReportSize.h" />
     <ClInclude Include="src\headers\utils\ecr\ReportType.h" />
+    <ClInclude Include="src\headers\utils\ecr\Sale.h" />
+    <ClInclude Include="src\headers\utils\ecr\SaleCommand.h" />
     <ClInclude Include="src\headers\utils\ecr\SaleInfo.h" />
     <ClInclude Include="src\headers\utils\ecr\TotalAdjustments.h" />
     <ClInclude Include="src\headers\utils\ecr\VatRates.h" />
+    <ClInclude Include="src\headers\utils\ecr\VatRatesCommand.h" />
     <ClInclude Include="src\headers\utils\ecr\VatRateType.h" />
     <ClInclude Include="src\headers\utils\Sleep.hpp" />
-    <ClInclude Include="src\headers\utils\StringUtils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MainApp.cpp" />

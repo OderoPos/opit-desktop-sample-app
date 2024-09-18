@@ -3,10 +3,8 @@
 #include <iostream>
 #include <string>
 #include <cstring>
-#include "../../utils/StringUtils.h"
-#include "../../dll.h"
 
-class DllExport HostMessage {
+class HostMessage {
 private:
     char* pairCode;
     char* operationType;

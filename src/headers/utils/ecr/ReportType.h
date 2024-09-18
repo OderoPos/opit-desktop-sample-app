@@ -1,11 +1,6 @@
 #pragma once
 
-#include <stdexcept>
-#include <cstring>
-#include "../../utils/StringUtils.h"
-#include "../../dll.h"
-
-class DllExport ReportType {
+class ReportType {
 public:
     enum Value : size_t {
         Z,
@@ -28,10 +23,10 @@ public:
     );
 
     const char* getName();
-    Value* getValue();
+    Value getValue();
     static Value getEnum(const char* name);
     bool operator==(const ReportType& rhs);
 
 private:
-    Value* value;
+    Value value;
 };

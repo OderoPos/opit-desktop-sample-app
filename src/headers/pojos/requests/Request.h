@@ -4,12 +4,10 @@
 #include <string>
 #include <iostream>
 #include <cstring>
-#include "../../dll.h"
-#include "../../utils/StringUtils.h"
 
-class DllExport Request {
+class Request {
 protected:
-	char* uniqueId = NULL;
+	char* uniqueId = nullptr;
 
 	const char* getUniqueId();
 	void setUniqueId(const char* uniqueId_);

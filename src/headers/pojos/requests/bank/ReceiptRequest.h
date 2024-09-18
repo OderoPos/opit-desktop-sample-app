@@ -2,9 +2,9 @@
 
 #include "../Request.h"
 
-class DllExport ReceiptRequest : public Request {
+class ReceiptRequest : public Request {
 private:
-    char* receiptNo = NULL;
+    char* receiptNo = nullptr;
 
 public:
     ReceiptRequest();

@@ -2,25 +2,25 @@
 
 #include "../Result.h"
 
-class BasicResult : public Result {
+class EcrResult : public Result {
 private:
-    char* result;
+    char* result = nullptr;
 
 public:
-    BasicResult();
+    EcrResult();
 
-    explicit BasicResult(
+    explicit EcrResult(
         const char* result_,
         const char* uniqueId_
     );
 
-    ~BasicResult();
+    ~EcrResult();
 
     const char* getResult();
     void setResult(const char* result_);
 
-    bool operator==(const BasicResult& rhs);
+    bool operator==(const EcrResult& rhs);
     const char* toJson();
-    static BasicResult fromJson(const char* json);
+    static EcrResult fromJson(const char* json);
     void toString();
 };

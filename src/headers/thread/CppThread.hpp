@@ -26,17 +26,17 @@ public:
         DWORD dwThreadId;
 
         HANDLE hThreadArray = CreateThread(
-            NULL,                   // default security attributes
-            0,                      // use default stack size
-            function,               // thread function name
+            nullptr,           // default security attributes
+            0,                 // use default stack size
+            function,          // thread function name
             argument,          // argument to thread function 
-            0,                      // use default creation flags 
-            &dwThreadId);           // returns the thread identifier
+            0,                 // use default creation flags 
+            &dwThreadId);      // returns the thread identifier
 
         // Check the return value for success.
         // If CreateThread fails, terminate execution. 
         // This will automatically clean up threads and memory. 
-        if (hThreadArray == NULL) {
+        if (hThreadArray == nullptr) {
             std::cout << "startReadThread error creating thread" << std::endl;
             ExitProcess(3);
         }

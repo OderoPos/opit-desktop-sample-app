@@ -2,10 +2,10 @@
 
 #include "../Request.h"
 
-class DllExport CurrencyRequest : public Request {
+class CurrencyRequest : public Request {
 private:
-    char* currency = NULL;
-    char* currencyCode = NULL;
+    char* currency = nullptr;
+    char* currencyCode = nullptr;
 
 public:
     CurrencyRequest();

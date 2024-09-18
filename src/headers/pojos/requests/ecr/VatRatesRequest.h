@@ -1,26 +1,24 @@
 #pragma once
 
 #include "../Request.h"
-#include "../../../utils/ecr/VatRates.h"
+#include "../../../utils/ecr/VatRatesCommand.h"
 
-class DllExport VatRatesRequest : public Request {
+class VatRatesRequest : public Request {
 private:
-    VatRates* vatRates = NULL;
-    int vatRatesSize;
+    VatRatesCommand* command = nullptr;
 
 public:
     VatRatesRequest();
 
     explicit VatRatesRequest(
-        VatRates* vatRates_,
-        int vatRatesSize_,
+        VatRatesCommand* command_,
         const char* uniqueId_
     );
 
     ~VatRatesRequest();
 
-    const VatRates* getVatRates();
-    void setVatRates(VatRates* vatRates_, int vatRatesSize_);
+    const VatRatesCommand* getVatRatesCommand();
+    void setVatRatesCommand(VatRatesCommand* command_);
 
     bool operator==(const VatRatesRequest& rhs);
     const char* toJson();

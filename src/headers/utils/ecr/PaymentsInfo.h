@@ -1,12 +1,9 @@
 #pragma once
 
-#include "../../utils/StringUtils.h"
-#include "../../dll.h"
-
-class DllExport PaymentsInfo {
+class PaymentsInfo {
 private:
-    int paymentMethodId;
-    char* value = NULL;
+    int paymentMethodId = 0;
+    char* value = nullptr;
 
 public:
     PaymentsInfo();

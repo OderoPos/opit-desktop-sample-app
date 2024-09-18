@@ -1,12 +1,10 @@
 #pragma once
 
-#include "../../utils/StringUtils.h"
 #include "../../utils/ecr/PagePosition.h"
-#include "../../dll.h"
 
-class DllExport FreeTextInfo {
+class FreeTextInfo {
 private:
-    char* freeText = NULL;
+    char* freeText = nullptr;
     PagePosition position;
 
 public:
