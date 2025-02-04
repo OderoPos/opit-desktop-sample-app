@@ -95,9 +95,9 @@ int __cdecl main(int argc, char** argv) {
 			std::cout << "Choose option: ";
 
 			std::cin >> option;
+			std::cin.clear();
 
 			if (option < 1 || option > 32) {
-				std::cin.clear();
 				std::cout << "Wrong choice." << std::endl;
 				return 0;
 			}

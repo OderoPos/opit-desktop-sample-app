@@ -177,7 +177,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>OpitCoreDesktop.lib;OpitWiFiDesktop.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OpitCoreDesktop.lib;OpitBtDesktop.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Users\token01\Downloads\opit-desktop-sample-app\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
